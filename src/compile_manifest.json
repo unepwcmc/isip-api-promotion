@@ -2,5 +2,7 @@
   "templates/species_index",
   "views/species_index_view",
   "models/species",
-  "collections/species_collection"
+  "collections/species_collection",
+  "templates/species_row",
+  "views/species_row_view"
 ]
