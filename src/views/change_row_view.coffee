@@ -10,12 +10,13 @@ class Backbone.Views.ChangeRowView extends Backbone.View
 
   initialize: (options) ->
     @model = options.model
+    @listenTo(@model, 'change', @render)
     @render()
 
   render: =>
     @$el.html(@template(model: @model))
 
   applyChange: ->
-    alert "if this worked, you would have applied change #{@model.get('id')}"
+    @model.applyChange()
 
   onClose: ->

@@ -7,6 +7,7 @@ class Backbone.Views.SpeciesRowView extends Backbone.View
 
   initialize: (options) ->
     @model = options.model
+    @listenTo(@model, 'change', @render)
     @render()
 
   render: =>

@@ -20,8 +20,8 @@
       "party_name": null,
       "spanish_full_note": null,
       "spanish_short_note": null,
-      "species_listing_id": 2,
-      "species_listing_name": "II",
+      "species_listing_id": 3,
+      "species_listing_name": "III",
       "symbol": null,
       "taxon_concept_id": 6550
     },
@@ -46,8 +46,8 @@
     "party_name": null,
     "spanish_full_note": null,
     "spanish_short_note": null,
-    "species_listing_id": 2,
-    "species_listing_name": "II",
+    "species_listing_id": 1,
+    "species_listing_name": "I",
     "symbol": null,
     "taxon_concept_id": 2063
   },
@@ -72,8 +72,8 @@
     "party_name": null,
     "spanish_full_note": null,
     "spanish_short_note": null,
-    "species_listing_id": 2,
-    "species_listing_name": "II",
+    "species_listing_id": 3,
+    "species_listing_name": "III",
     "symbol": null,
     "taxon_concept_id": 2063
   },
@@ -124,8 +124,8 @@
     "party_name": null,
     "spanish_full_note": null,
     "spanish_short_note": null,
-    "species_listing_id": 2,
-    "species_listing_name": "II",
+    "species_listing_id": 1,
+    "species_listing_name": "I",
     "symbol": null,
     "taxon_concept_id": 2068
   }

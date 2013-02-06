@@ -89,7 +89,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['species_row'] = _.template("<%= model.get('id') %>: <%= model.get('species_name') %>");
+  window.JST['species_row'] = _.template("<%= model.get('species_name') %> <%= model.get('current_listing') %>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -110,6 +110,7 @@
 
     SpeciesRowView.prototype.initialize = function(options) {
       this.model = options.model;
+      this.listenTo(this.model, 'change', this.render);
       return this.render();
     };
 
@@ -135,6 +136,12 @@
       return Change.__super__.constructor.apply(this, arguments);
     }
 
+    Change.prototype.initialize = function() {
+      return this.set({
+        applied: false
+      });
+    };
+
     Change.prototype.getSpecies = function() {
       if (this.species != null) {
         return this.species;
@@ -143,6 +150,19 @@
           id: this.get('taxon_concept_id')
         })[0];
       }
+    };
+
+    Change.prototype.changeText = function() {
+      return "" + (this.get('change_type_name')) + ": " + (this.getSpecies().get('species_name')) + " to appendix " + (this.get('species_listing_name'));
+    };
+
+    Change.prototype.applyChange = function() {
+      this.getSpecies().set({
+        current_listing: this.get('species_listing_name')
+      });
+      return this.set({
+        applied: true
+      });
     };
 
     return Change;
@@ -215,7 +235,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<%= model.getSpecies().get('species_name') + ': ' + model.get('change_type_name') %>:<button>apply</button>");
+  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Apply</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -240,6 +260,7 @@
 
     ChangeRowView.prototype.initialize = function(options) {
       this.model = options.model;
+      this.listenTo(this.model, 'change', this.render);
       return this.render();
     };
 
@@ -250,7 +271,7 @@
     };
 
     ChangeRowView.prototype.applyChange = function() {
-      return alert("if this worked, you would have applied change " + (this.model.get('id')));
+      return this.model.applyChange();
     };
 
     ChangeRowView.prototype.onClose = function() {};
