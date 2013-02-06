@@ -1,2 +1,6 @@
 [
+  "templates/species_index",
+  "views/species_index_view",
+  "models/species",
+  "collections/species_collection"
 ]

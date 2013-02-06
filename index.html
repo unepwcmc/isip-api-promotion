@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>BackboneDiorama</title>
+    <title>ISIP demonstration</title>
     <script src="js/lib/jquery-1.8.3.min.js"></script>
     <script src="js/lib/json2.js"></script>
     <script src="js/lib/underscore-min.js"></script>
@@ -13,8 +13,8 @@
     <script type="text/javascript">
       // TODO Temporary app init code to go here
       $(document).ready(function(){
-        //var species_index_view = new Backbone.Views.SpeciesIndexView();
-        //$('#side-panel').append(species_index_view.el);
+        var species_index_view = new Backbone.Views.SpeciesIndexView();
+        $('#side-panel').append(species_index_view.el);
       })
     </script>
   </head>
