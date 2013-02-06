@@ -5,9 +5,8 @@ class Backbone.Views.SpeciesIndexView extends Backbone.Diorama.NestingView
   template: JST['species_index']
 
   initialize: (options) ->
-    @speciesList = new Backbone.Collections.SpeciesCollection()
+    @speciesList = options.speciesList
     @listenTo(@speciesList, 'sync', @render)
-    @speciesList.fetch()
     
     @render()
 

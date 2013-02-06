@@ -25,9 +25,8 @@
     SpeciesIndexView.prototype.template = JST['species_index'];
 
     SpeciesIndexView.prototype.initialize = function(options) {
-      this.speciesList = new Backbone.Collections.SpeciesCollection();
+      this.speciesList = options.speciesList;
       this.listenTo(this.speciesList, 'sync', this.render);
-      this.speciesList.fetch();
       return this.render();
     };
 
@@ -136,6 +135,16 @@
       return Change.__super__.constructor.apply(this, arguments);
     }
 
+    Change.prototype.getSpecies = function() {
+      if (this.species != null) {
+        return this.species;
+      } else {
+        return this.species = ISIP.speciesList.where({
+          id: this.get('taxon_concept_id')
+        })[0];
+      }
+    };
+
     return Change;
 
   })(Backbone.Model);
@@ -154,11 +163,7 @@
 
     ChangeCollection.prototype.model = Backbone.Models.Change;
 
-    ChangeCollection.prototype.url = "data/species.json";
-
-    ChangeCollection.prototype.parse = function(data) {
-      return data[0].animalia.concat(data[0].animalia);
-    };
+    ChangeCollection.prototype.url = "data/changes.json";
 
     return ChangeCollection;
 
@@ -210,7 +215,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<%= model.get('species_name') %><button>Apply</button>");
+  window.JST['changes_row'] = _.template("<%= model.getSpecies().get('species_name') + ': ' + model.get('change_type_name') %>:<button>apply</button>");
 
   window.Backbone || (window.Backbone = {});
 

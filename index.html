@@ -18,7 +18,11 @@
     <script src="js/application.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        var species_index_view = new Backbone.Views.SpeciesIndexView();
+        window.ISIP = {};
+        ISIP.speciesList = new Backbone.Collections.SpeciesCollection();
+        ISIP.speciesList.fetch();
+        
+        var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
         $('#left-panel').append(species_index_view.el);
 
         var changes_index_view = new Backbone.Views.ChangesIndexView();
