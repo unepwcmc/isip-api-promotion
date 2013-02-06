@@ -6,3 +6,11 @@
   width: 50%;
   float:left;
 }
+
+#change-list button {
+  float:right;
+  display:none;
+}
+#change-list li:hover button {
+  display:block;
+}
