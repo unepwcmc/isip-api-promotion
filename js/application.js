@@ -229,6 +229,10 @@
 
     ChangeRowView.prototype.template = JST['changes_row'];
 
+    ChangeRowView.prototype.events = {
+      "click button": "applyChange"
+    };
+
     ChangeRowView.prototype.initialize = function(options) {
       this.model = options.model;
       return this.render();
@@ -238,6 +242,10 @@
       return this.$el.html(this.template({
         model: this.model
       }));
+    };
+
+    ChangeRowView.prototype.applyChange = function() {
+      return alert("if this worked, you would have applied change " + (this.model.get('id')));
     };
 
     ChangeRowView.prototype.onClose = function() {};
