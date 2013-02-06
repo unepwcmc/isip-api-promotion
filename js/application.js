@@ -111,6 +111,7 @@
     SpeciesRowView.prototype.initialize = function(options) {
       this.model = options.model;
       this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'change', this.highlight);
       return this.render();
     };
 
@@ -120,7 +121,14 @@
       }));
     };
 
-    SpeciesRowView.prototype.onClose = function() {};
+    SpeciesRowView.prototype.highlight = function() {
+      return this.$el.fadeTo('slow', 0.5).fadeTo('slow', 1);
+    };
+
+    SpeciesRowView.prototype.onClose = function() {
+      this.stopListening(this.model, 'change', this.render);
+      return this.stopListening(this.model, 'change', this.highlight);
+    };
 
     return SpeciesRowView;
 
@@ -235,7 +243,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Apply</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
+  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Merge</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
 
   window.Backbone || (window.Backbone = {});
 
