@@ -4,5 +4,11 @@
   "models/species",
   "collections/species_collection",
   "templates/species_row",
-  "views/species_row_view"
+  "views/species_row_view",
+  "models/change",
+  "collections/change_collection",
+  "templates/changes_index",
+  "views/changes_index_view",
+  "templates/changes_row",
+  "views/change_row_view"
 ]
