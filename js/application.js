@@ -193,6 +193,12 @@
 
     ChangeCollection.prototype.url = "data/changes.json";
 
+    ChangeCollection.prototype.applyAll = function() {
+      return this.each(function(model) {
+        return model.applyChange();
+      });
+    };
+
     ChangeCollection.prototype.outstandingChanges = function() {
       return this.where({
         applied: false
@@ -211,7 +217,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<h1>Changes</h1>\n<ul id=\"change-list\">\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
+  window.JST['changes_index'] = _.template("<h1>Changes</h1>\n<button id=\"apply-all\">Apply All</button>\n<ul id=\"change-list\">\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -227,6 +233,10 @@
     }
 
     ChangesIndexView.prototype.template = JST['changes_index'];
+
+    ChangesIndexView.prototype.events = {
+      "click #apply-all": "applyAll"
+    };
 
     ChangesIndexView.prototype.initialize = function(options) {
       this.changeList = options.changeList;
@@ -244,6 +254,10 @@
       return this;
     };
 
+    ChangesIndexView.prototype.applyAll = function() {
+      return this.changeList.applyAll();
+    };
+
     ChangesIndexView.prototype.onClose = function() {
       this.stopListening(this.changeList, 'sync', this.render);
       return this.closeSubViews();
@@ -255,7 +269,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Merge</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
+  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Apply</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
 
   window.Backbone || (window.Backbone = {});
 

@@ -6,6 +6,11 @@ class Backbone.Collections.ChangeCollection extends Backbone.Collection
 
   url: "data/changes.json"
 
+  applyAll: ->
+    @each((model)->
+      model.applyChange()
+    )
+
   outstandingChanges: ->
     @where({applied: false})
 

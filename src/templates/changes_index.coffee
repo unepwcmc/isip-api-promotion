@@ -2,6 +2,7 @@ window.JST ||= {}
 
 window.JST['changes_index'] = _.template("""
   <h1>Changes</h1>
+  <button id="apply-all">Apply All</button>
   <ul id="change-list">
     <%
       var i, il, changeModel;

@@ -4,6 +4,9 @@ window.Backbone.Views ||= {}
 class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
   template: JST['changes_index']
 
+  events:
+    "click #apply-all": "applyAll"
+
   initialize: (options) ->
     @changeList = options.changeList
     @listenTo(@changeList, 'sync', @render)
@@ -15,6 +18,9 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
     @renderSubViews()
     
     return @
+  
+  applyAll: ->
+    @changeList.applyAll()
 
   onClose: ->
     @stopListening(@changeList, 'sync', @render)
