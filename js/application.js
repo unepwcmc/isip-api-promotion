@@ -322,7 +322,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['stats'] = _.template("<h1>Stats</h1>\n<ul class=\"stats\">\n  <li>Changes outstanding: <span class=\"value\"><%= outstandingCount %></span></li>\n  <li>Changes merged:  <span class=\"value\"><%= appliedCount %></span></li>\n  <li>Time saved:  <span class=\"value\"><%= hoursSaved %> Hours</span></li>\n</ul>");
+  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>Changes outstanding:</h4>\n    <span class=\"value\"><%= outstandingCount %></span>\n  </li>\n  <li>\n    <h4>Changes merged:</h4>\n    <span class=\"value\"><%= appliedCount %></span>\n  </li>\n  <li>\n    <h4>Time saved:</h4>\n    <span class=\"value\"><%= hoursSaved %> Hours</span>\n  </li>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 

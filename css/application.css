@@ -3,14 +3,14 @@
   position: absolute;
   left: 0;
   top:0;
-  bottom:200px
+  bottom:95px
 }
 #right-panel {
   width: 50%;
   position: absolute;
   right: 0;
   top:0;
-  bottom:200px
+  bottom:95px
 }
 
 #species-list, #change-list {
@@ -42,7 +42,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 200px;
+  height: 95px;
 }
 
 .state {
@@ -102,4 +102,23 @@ footer {
   float:right;
   margin-top: 31px;
   margin-right: 28px;
+}
+
+ul.stats {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul.stats li {
+  background-color: #eee;
+  text-align: center;
+  float:left;
+  width:30%;
+  margin-left: 15px;
+}
+ul.stats h4 {
+  font-family: Arial;
+  margin: 5px;
+}
+ul.stats .value {
+  font-size:30px;
 }
