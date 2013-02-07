@@ -13,7 +13,7 @@
   bottom:200px
 }
 
-#species-list {
+#species-list, #change-list {
   overflow: scroll;
   position: absolute;
   bottom: 0px;
@@ -21,8 +21,10 @@
   left: 0px;
   right: 26px;
   padding-left: 15px;
+  list-style-type: none;
 }
-#species-list li {
+#species-list li,
+#change-list li {
   overflow: hidden;
   margin: 3px 0;
   border-bottom: 1px solid #EEE;
@@ -85,4 +87,19 @@ footer {
 }
 .appendix.III {
   background-color: #F8A46A;
+}
+.change-text {
+  float:left;
+  margin-right: 5px;
+}
+.header {
+  overflow:hidden;
+}
+.header h1 {
+  float:left;
+}
+.header button {
+  float:right;
+  margin-top: 31px;
+  margin-right: 28px;
 }

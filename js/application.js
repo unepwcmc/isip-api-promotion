@@ -125,7 +125,6 @@
     };
 
     SpeciesRowView.prototype.render = function() {
-      console.log(this.model.pendingChangeCount());
       return this.$el.html(this.template({
         model: this.model,
         pendingChangeCount: this.model.pendingChangeCount()
@@ -169,10 +168,6 @@
           id: this.get('taxon_concept_id')
         })[0];
       }
-    };
-
-    Change.prototype.changeText = function() {
-      return "" + (this.get('change_type_name')) + ": " + (this.getSpecies().get('species_name')) + " to appendix " + (this.get('species_listing_name'));
     };
 
     Change.prototype.applyChange = function() {
@@ -228,7 +223,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<h1>Changes</h1>\n<button id=\"apply-all\">Apply All</button>\n<ul id=\"change-list\">\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
+  window.JST['changes_index'] = _.template("<div class=\"header\">\n  <h1>Changes</h1>\n  <button id=\"apply-all\">Apply All</button>\n</div>\n<ul id=\"change-list\">\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -280,7 +275,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<% if(model.get('applied') === true) { %><strike><% } %>\n  <%= model.changeText() %><button>Apply</button>\n<% if(model.get('applied') === true) { %></strike><% } %>");
+  window.JST['changes_row'] = _.template("<span class=\"change-text\">\n  <% if(model.get('applied') === true) { %><strike><% } %>\n    <%= model.get('change_type_name')%>: <%= model.getSpecies().get('full_name') %> to appendix\n  <% if(model.get('applied') === true) { %></strike><% } %>\n</span>\n<span class=\"appendix <%= model.get('species_listing_name') %>\"><%= model.get('species_listing_name')%></span>\n<button>Apply</button>");
 
   window.Backbone || (window.Backbone = {});
 
