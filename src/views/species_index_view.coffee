@@ -7,6 +7,7 @@ class Backbone.Views.SpeciesIndexView extends Backbone.Diorama.NestingView
   initialize: (options) ->
     @speciesList = options.speciesList
     @listenTo(@speciesList, 'sync', @render)
+    @listenTo(ISIP.changeList, 'sync', @render)
     
     @render()
 
@@ -19,3 +20,4 @@ class Backbone.Views.SpeciesIndexView extends Backbone.Diorama.NestingView
   onClose: ->
     @closeSubViews()
     @stopListening(@speciesList, 'sync', @render)
+    @stopListening(ISIP.changeList, 'sync', @render)

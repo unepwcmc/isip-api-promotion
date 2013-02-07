@@ -12,7 +12,10 @@ class Backbone.Views.SpeciesRowView extends Backbone.View
     @render()
 
   render: =>
-    @$el.html(@template(model: @model))
+    @$el.html(@template(
+      model: @model
+      pendingChangeCount: @model.pendingChangeCount()
+    ))
 
   highlight: ->
     @$el.fadeTo('slow', 0.5).fadeTo('slow', 1)

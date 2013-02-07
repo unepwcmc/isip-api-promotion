@@ -15,6 +15,6 @@ class window.Backbone.Models.Change extends Backbone.Model
     "#{@get('change_type_name')}: #{@getSpecies().get('species_name')} to appendix #{@get('species_listing_name')}"
 
   applyChange: ->
-    @getSpecies().set(current_listing: @get('species_listing_name'))
     @set(applied: true)
+    @getSpecies().set(current_listing: @get('species_listing_name'))
 

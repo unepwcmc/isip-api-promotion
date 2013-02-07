@@ -13,6 +13,21 @@
   bottom:200px
 }
 
+#species-list {
+  overflow: scroll;
+  position: absolute;
+  bottom: 0px;
+  top: 50px;
+  left: 0px;
+  right: 26px;
+  padding-left: 15px;
+}
+#species-list li {
+  overflow: hidden;
+  margin: 3px 0;
+  border-bottom: 1px solid #EEE;
+  line-height: 27px;
+}
 #change-list button {
   float:right;
   display:none;
@@ -26,4 +41,48 @@ footer {
   position: absolute;
   bottom: 0;
   height: 200px;
+}
+
+.state {
+  float:right;
+  width: 55px;
+}
+
+.notification {
+  background: radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+  background: -moz-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+  background: -ms-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+  background: -o-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+  background: -webkit-radial-gradient( center -9px, circle, white 0, red 26px );
+  background-color: red;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px black;
+  color: white;
+  font: 15px Helvetica, Verdana, Tahoma;
+  font-weight: bold;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  width: 18px;
+  float: left;
+  margin-left: 5px;
+}
+.appendix {
+  border-radius: 15px;
+  background-color: #9BC776;
+  font:15px Helvetica, Verdana, Tahoma;
+  color: white;
+  width: 24px;
+  display: block;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  float:left;
+}
+.appendix.I {
+  background-color: #6EA6C7;
+}
+.appendix.III {
+  background-color: #F8A46A;
 }

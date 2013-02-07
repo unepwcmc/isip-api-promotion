@@ -7,7 +7,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['species_index'] = _.template("<h1>Species</h1>\n<ul>\n  <%\n    var i, il, speciesModel;\n    for(i = 0, il=speciesModels.length; i<il; i++){\n      speciesModel = speciesModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.SpeciesRowView({model: speciesModel})) %>\n  <%\n    }\n  %>\n</ul>");
+  window.JST['species_index'] = _.template("<h1>Species</h1>\n<ul id=\"species-list\">\n  <%\n    var i, il, speciesModel;\n    for(i = 0, il=speciesModels.length; i<il; i++){\n      speciesModel = speciesModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.SpeciesRowView({model: speciesModel})) %>\n  <%\n    }\n  %>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -27,6 +27,7 @@
     SpeciesIndexView.prototype.initialize = function(options) {
       this.speciesList = options.speciesList;
       this.listenTo(this.speciesList, 'sync', this.render);
+      this.listenTo(ISIP.changeList, 'sync', this.render);
       return this.render();
     };
 
@@ -42,7 +43,8 @@
 
     SpeciesIndexView.prototype.onClose = function() {
       this.closeSubViews();
-      return this.stopListening(this.speciesList, 'sync', this.render);
+      this.stopListening(this.speciesList, 'sync', this.render);
+      return this.stopListening(ISIP.changeList, 'sync', this.render);
     };
 
     return SpeciesIndexView;
@@ -58,6 +60,13 @@
     function Species() {
       return Species.__super__.constructor.apply(this, arguments);
     }
+
+    Species.prototype.pendingChangeCount = function() {
+      return ISIP.changeList.where({
+        taxon_concept_id: this.get('id'),
+        applied: false
+      }).length;
+    };
 
     return Species;
 
@@ -89,7 +98,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['species_row'] = _.template("<%= model.get('species_name') %> <%= model.get('current_listing') %>");
+  window.JST['species_row'] = _.template("<%= model.get('full_name') %>\n<span class=\"state\">\n  <div class=\"appendix <%= model.get('current_listing') %>\"><%= model.get('current_listing') %></div>\n  <% if(pendingChangeCount > 0) { %>\n    <div class=\"notification\"><%= pendingChangeCount %></div>\n  <% } %>\n</span>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -116,8 +125,10 @@
     };
 
     SpeciesRowView.prototype.render = function() {
+      console.log(this.model.pendingChangeCount());
       return this.$el.html(this.template({
-        model: this.model
+        model: this.model,
+        pendingChangeCount: this.model.pendingChangeCount()
       }));
     };
 
@@ -165,11 +176,11 @@
     };
 
     Change.prototype.applyChange = function() {
-      this.getSpecies().set({
-        current_listing: this.get('species_listing_name')
-      });
-      return this.set({
+      this.set({
         applied: true
+      });
+      return this.getSpecies().set({
+        current_listing: this.get('species_listing_name')
       });
     };
 
