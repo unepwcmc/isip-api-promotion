@@ -5,9 +5,8 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
   template: JST['changes_index']
 
   initialize: (options) ->
-    @changeList = new Backbone.Collections.ChangeCollection()
+    @changeList = options.changeList
     @listenTo(@changeList, 'sync', @render)
-    @changeList.fetch()
     @render()
 
   render: =>
@@ -18,4 +17,5 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
     return @
 
   onClose: ->
+    @stopListening(@changeList, 'sync', @render)
     @closeSubViews()

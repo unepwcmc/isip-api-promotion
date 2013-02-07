@@ -10,5 +10,7 @@
   "templates/changes_index",
   "views/changes_index_view",
   "templates/changes_row",
-  "views/change_row_view"
+  "views/change_row_view",
+  "templates/stats",
+  "views/stats_view"
 ]

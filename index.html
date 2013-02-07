@@ -19,14 +19,22 @@
     <script type="text/javascript">
       $(document).ready(function(){
         window.ISIP = {};
+        // Collections
         ISIP.speciesList = new Backbone.Collections.SpeciesCollection();
         ISIP.speciesList.fetch();
+
+        ISIP.changeList = new Backbone.Collections.ChangeCollection();
+        ISIP.changeList.fetch();
         
+        // Views
         var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
         $('#left-panel').append(species_index_view.el);
 
-        var changes_index_view = new Backbone.Views.ChangesIndexView();
+        var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList});
         $('#right-panel').append(changes_index_view.el);
+
+        var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
+        $('footer').append(stats_view.el);
       });
     </script>
   </head>
@@ -35,5 +43,7 @@
     </div>
     <div id="right-panel">
     </div>
+    <footer>
+    </footer>
   </body>
 </html>
