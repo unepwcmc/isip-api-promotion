@@ -341,7 +341,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>MANUAL UPDATE</h4>\n    <h5>CHANGES TO APPLY</h5>\n    <span class=\"value\"><%= manualOutstandingChanges %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= manualTimeRemaining.days %> days, <%= manualTimeRemaining.hours %> hours, <%= manualTimeRemaining.minutes %> minutes</span>\n  </li>\n  <li>\n    <h4>WCMC API</h4>\n    <h5>API CHANGES LEFT TO APPLY</h5>\n    <span class=\"value\"><%= changesLeftToApply %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= apiTimeRemaining %> seconds</span>\n  </li>\n  <li>\n    <h4>WCMC API SAVED</h4>\n    <span class=\"value\"><%= '' %></span>\n  </li>\n</ul>");
+  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>MANUAL UPDATE</h4>\n    <h5>CHANGES TO APPLY</h5>\n    <span class=\"value\"><%= manualOutstandingChanges %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= manualTimeRemaining.days %> days, <%= manualTimeRemaining.hours %> hours, <%= manualTimeRemaining.minutes %> minutes</span>\n  </li>\n  <li>\n    <h4>WCMC API</h4>\n    <h5>API CHANGES LEFT TO APPLY</h5>\n    <span class=\"value\"><%= changesLeftToApply %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= apiTimeRemaining.minutes %> hours, <%= apiTimeRemaining.minutes %> minutes, <%= apiTimeRemaining.seconds %> seconds</span>\n  </li>\n  <li>\n    <h4>WCMC API SAVED</h4>\n    <p>Over <%= appliedChanges %> changes, you saved: </p>\n    <span class=\"value\"><%= timeSaved.hours %> hours, <%= timeSaved.minutes %> minutes</span>\n  </li>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -368,13 +368,16 @@
     };
 
     StatsView.prototype.render = function() {
-      var unappliedChanges;
-      unappliedChanges = this.changeList.models.length - this.changeList.appliedChanges().length;
+      var appliedChanges, unappliedChanges;
+      appliedChanges = this.changeList.appliedChanges().length;
+      unappliedChanges = this.changeList.models.length - appliedChanges;
       return this.$el.html(this.template({
-        manualOutstandingChanges: Math.round((this.manualTimeRemaining / this.taskTime) + 0.49),
+        manualOutstandingChanges: this.roundUp(this.manualTimeRemaining / this.taskTime),
         manualTimeRemaining: this.secondsAsTime(this.manualTimeRemaining),
         changesLeftToApply: unappliedChanges,
-        apiTimeRemaining: unappliedChanges
+        apiTimeRemaining: this.secondsAsTime(unappliedChanges),
+        appliedChanges: appliedChanges,
+        timeSaved: this.secondsAsTime(appliedChanges * this.taskTime - appliedChanges)
       }));
     };
 
@@ -398,18 +401,24 @@
       return this.timer = setTimeout(this.updateTimers, 1000);
     };
 
+    StatsView.prototype.roundDown = function(number) {
+      return Math.round(number - 0.5);
+    };
+
+    StatsView.prototype.roundUp = function(number) {
+      return Math.round(number + 0.5);
+    };
+
     StatsView.prototype.secondsAsTime = function(seconds) {
-      var roundDown, secondsInHour, secondsInMinute, secondsInWorkDay, times;
+      var secondsInHour, secondsInMinute, secondsInWorkDay, times;
       times = {};
-      roundDown = function(number) {
-        return Math.round(number - 0.5);
-      };
       secondsInMinute = 60;
       secondsInHour = secondsInMinute * 60;
       secondsInWorkDay = secondsInHour * 7.5;
-      times.days = roundDown(seconds / secondsInWorkDay);
-      times.hours = roundDown((seconds - (times.days * secondsInWorkDay)) / secondsInHour);
-      times.minutes = roundDown((seconds - ((times.hours * secondsInHour) + (times.days * secondsInWorkDay))) / secondsInMinute);
+      times.days = this.roundDown(seconds / secondsInWorkDay);
+      times.hours = this.roundDown((seconds - (times.days * secondsInWorkDay)) / secondsInHour);
+      times.minutes = this.roundDown((seconds - ((times.hours * secondsInHour) + (times.days * secondsInWorkDay))) / secondsInMinute);
+      times.seconds = this.roundDown(seconds - ((times.minutes * secondsInMinute) + (times.hours * secondsInHour) + (times.days * secondsInWorkDay)));
       return times;
     };
 

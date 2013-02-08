@@ -11,12 +11,15 @@ class Backbone.Views.StatsView extends Backbone.View
     @resetManualTimer()
 
   render: =>
-    unappliedChanges = @changeList.models.length - @changeList.appliedChanges().length
+    appliedChanges = @changeList.appliedChanges().length
+    unappliedChanges = @changeList.models.length - appliedChanges
     @$el.html(@template(
-      manualOutstandingChanges: Math.round((@manualTimeRemaining/@taskTime)+0.49)
+      manualOutstandingChanges: @roundUp(@manualTimeRemaining/@taskTime)
       manualTimeRemaining: @secondsAsTime(@manualTimeRemaining)
       changesLeftToApply: unappliedChanges
-      apiTimeRemaining: unappliedChanges
+      apiTimeRemaining: @secondsAsTime(unappliedChanges)
+      appliedChanges: appliedChanges
+      timeSaved: @secondsAsTime(appliedChanges*@taskTime - appliedChanges)
     ))
 
   taskTime: 3600
@@ -35,16 +38,21 @@ class Backbone.Views.StatsView extends Backbone.View
     
     @timer = setTimeout(@updateTimers, 1000)
 
+  roundDown:  (number) ->
+    Math.round(number - 0.5)
+
+  roundUp:  (number) ->
+    Math.round(number + 0.5)
+
   secondsAsTime: (seconds)->
     times = {}
-    roundDown = (number) ->
-      Math.round(number - 0.5)
     secondsInMinute = 60
     secondsInHour = secondsInMinute*60
     secondsInWorkDay = secondsInHour*7.5
-    times.days = roundDown(seconds/secondsInWorkDay)
-    times.hours = roundDown((seconds-(times.days*secondsInWorkDay))/secondsInHour)
-    times.minutes = roundDown((seconds-((times.hours*secondsInHour)+(times.days*secondsInWorkDay)))/secondsInMinute)
+    times.days = @roundDown(seconds/secondsInWorkDay)
+    times.hours = @roundDown((seconds-(times.days*secondsInWorkDay))/secondsInHour)
+    times.minutes = @roundDown((seconds-((times.hours*secondsInHour)+(times.days*secondsInWorkDay)))/secondsInMinute)
+    times.seconds = @roundDown(seconds-((times.minutes*secondsInMinute)+(times.hours*secondsInHour)+(times.days*secondsInWorkDay)))
     return times
 
   onClose: ->
