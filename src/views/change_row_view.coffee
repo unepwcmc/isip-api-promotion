@@ -14,7 +14,8 @@ class Backbone.Views.ChangeRowView extends Backbone.View
     @render()
 
   render: =>
-    @$el.html(@template(model: @model))
+    species = @model.getSpecies()
+    @$el.html(@template(change: @model, species: species))
 
   applyChange: ->
     @model.applyChange()

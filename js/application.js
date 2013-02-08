@@ -247,6 +247,8 @@
     ChangesIndexView.prototype.initialize = function(options) {
       this.changeList = options.changeList;
       this.listenTo(this.changeList, 'sync', this.render);
+      this.speciesList = options.speciesList;
+      this.listenTo(this.speciesList, 'sync', this.render);
       return this.render();
     };
 
@@ -266,6 +268,7 @@
 
     ChangesIndexView.prototype.onClose = function() {
       this.stopListening(this.changeList, 'sync', this.render);
+      this.stopListening(this.speciesList, 'sync', this.render);
       return this.closeSubViews();
     };
 
@@ -275,7 +278,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<span class=\"change-text\">\n  <% if(model.get('applied') === true) { %><strike><% } %>\n    <%= model.get('change_type_name')%>: <%= model.getSpecies().get('full_name') %> to appendix\n  <% if(model.get('applied') === true) { %></strike><% } %>\n</span>\n<span class=\"appendix <%= model.get('species_listing_name') %>\"><%= model.get('species_listing_name')%></span>\n<button>Apply</button>");
+  window.JST['changes_row'] = _.template("<span class=\"change-text\">\n  <% if(change.get('applied') === true) { %><strike><% } %>\n    <%= change.get('change_type_name')%>: <%= typeof species !== 'undefined' ? species.get('full_name') : 'Unknown species' %> to appendix\n  <% if(change.get('applied') === true) { %></strike><% } %>\n</span>\n<span class=\"appendix <%= change.get('species_listing_name') %>\"><%= change.get('species_listing_name')%></span>\n<button>Apply</button>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -305,8 +308,11 @@
     };
 
     ChangeRowView.prototype.render = function() {
+      var species;
+      species = this.model.getSpecies();
       return this.$el.html(this.template({
-        model: this.model
+        change: this.model,
+        species: species
       }));
     };
 
