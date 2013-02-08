@@ -27,23 +27,23 @@
         ISIP.changeList.fetch();
         
         // Views
-        var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
-        $('#left-panel').append(species_index_view.el);
+        var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
+        $('#stat-header').append(stats_view.el);
 
         var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
-        $('#right-panel').append(changes_index_view.el);
+        $('#change-list').append(changes_index_view.el);
 
-        var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
-        $('footer').append(stats_view.el);
+        /* 
+        var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
+        $('#left-panel').append(species_index_view.el);
+        */
       });
     </script>
   </head>
   <body>
-    <div id="left-panel">
+    <div id="stat-header">
     </div>
-    <div id="right-panel">
+    <div id="change-list">
     </div>
-    <footer>
-    </footer>
   </body>
 </html>

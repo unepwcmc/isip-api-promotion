@@ -1,74 +1,5 @@
-#left-panel {
-  width: 50%;
-  position: absolute;
-  left: 0;
-  top:0;
-  bottom:95px
-}
-#right-panel {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top:0;
-  bottom:95px
-}
-
-#species-list, #change-list {
-  overflow: scroll;
-  position: absolute;
-  bottom: 0px;
-  top: 50px;
-  left: 0px;
-  right: 26px;
-  padding-left: 15px;
-  list-style-type: none;
-}
-#species-list li,
-#change-list li {
-  overflow: hidden;
-  margin: 3px 0;
-  border-bottom: 1px solid #EEE;
-  line-height: 27px;
-}
-#change-list button {
-  float:right;
-  display:none;
-}
-#change-list li:hover button {
-  display:block;
-}
-
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  height: 95px;
-}
-
-.state {
-  float:right;
-  width: 55px;
-}
-
-.notification {
-  background: radial-gradient( center -9px, circle closest-side, white 0, red 26px );
-  background: -moz-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
-  background: -ms-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
-  background: -o-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
-  background: -webkit-radial-gradient( center -9px, circle, white 0, red 26px );
-  background-color: red;
-  border: 2px solid white;
-  border-radius: 15px;
-  box-shadow: 1px 1px 2px black;
-  color: white;
-  font: 15px Helvetica, Verdana, Tahoma;
-  font-weight: bold;
-  height: 18px;
-  line-height: 18px;
-  text-align: center;
-  width: 18px;
-  float: left;
-  margin-left: 5px;
+.applied {
+  opacity: 0.5;
 }
 .appendix {
   border-radius: 15px;
@@ -88,22 +19,6 @@ footer {
 .appendix.III {
   background-color: #F8A46A;
 }
-.change-text {
-  float:left;
-  margin-right: 5px;
-}
-.header {
-  overflow:hidden;
-}
-.header h1 {
-  float:left;
-}
-.header button {
-  float:right;
-  margin-top: 31px;
-  margin-right: 28px;
-}
-
 ul.stats {
   list-style-type: none;
   padding-left: 0;

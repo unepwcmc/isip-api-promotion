@@ -2,7 +2,7 @@ window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
 class Backbone.Views.ChangeRowView extends Backbone.View
-  tagName: 'li'
+  tagName: 'tr'
   template: JST['changes_row']
 
   events:
@@ -14,8 +14,14 @@ class Backbone.Views.ChangeRowView extends Backbone.View
     @render()
 
   render: =>
-    species = @model.getSpecies()
-    @$el.html(@template(change: @model, species: species))
+    if @model.get('applied') then @$el.addClass('applied') else @$el.removeClass('applied') 
+    if @model.getSpecies() 
+      speciesName = @model.getSpecies().get('full_name')
+      speciesListing = @model.getSpecies().get('current_listing')
+    else
+      speciesName = 'Unknown species'
+      speciesListing = 'Unlisted'
+    @$el.html(@template(change: @model, speciesName: speciesName, speciesListing: speciesListing))
 
   applyChange: ->
     @model.applyChange()

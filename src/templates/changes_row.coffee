@@ -1,11 +1,17 @@
 window.JST ||= {}
 
 window.JST['changes_row'] = _.template("""
-  <span class="change-text">
-    <% if(change.get('applied') === true) { %><strike><% } %>
-      <%= change.get('change_type_name')%>: <%= typeof species !== 'undefined' ? species.get('full_name') : 'Unknown species' %> to appendix
-    <% if(change.get('applied') === true) { %></strike><% } %>
-  </span>
-  <span class="appendix <%= change.get('species_listing_name') %>"><%= change.get('species_listing_name')%></span>
-  <button>Apply</button>
+  <td>
+    <%= speciesName %>
+  </td>
+  <td>
+    <span class="appendix <%= speciesListing %>"><%= speciesListing %></span> ->
+    <span class="appendix <%= change.get('species_listing_name') %>"><%= change.get('species_listing_name')%></span>
+  </td>
+  <td>
+    <%= change.get('applied') ? 'Applied' : 'Not Yet Applied' %>
+  </td>
+  <td>
+    <button>Apply</button>
+  </td>
 """)

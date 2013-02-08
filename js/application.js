@@ -223,7 +223,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<div class=\"header\">\n  <h1>Changes</h1>\n  <button id=\"apply-all\">Apply All</button>\n</div>\n<ul id=\"change-list\">\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
+  window.JST['changes_index'] = _.template("<table>\n  <tr>\n    <th>Species</th>\n    <th>Change</th>\n    <th>Status</th>\n    <th><button id=\"apply-all\">Apply All</button></th>\n  </tr>\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -249,6 +249,7 @@
       this.listenTo(this.changeList, 'sync', this.render);
       this.speciesList = options.speciesList;
       this.listenTo(this.speciesList, 'sync', this.render);
+      this.listenTo(this.speciesList, 'change', this.render);
       return this.render();
     };
 
@@ -268,7 +269,7 @@
 
     ChangesIndexView.prototype.onClose = function() {
       this.stopListening(this.changeList, 'sync', this.render);
-      this.stopListening(this.speciesList, 'sync', this.render);
+      this.stopListening(this.speciesList);
       return this.closeSubViews();
     };
 
@@ -278,7 +279,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<span class=\"change-text\">\n  <% if(change.get('applied') === true) { %><strike><% } %>\n    <%= change.get('change_type_name')%>: <%= typeof species !== 'undefined' ? species.get('full_name') : 'Unknown species' %> to appendix\n  <% if(change.get('applied') === true) { %></strike><% } %>\n</span>\n<span class=\"appendix <%= change.get('species_listing_name') %>\"><%= change.get('species_listing_name')%></span>\n<button>Apply</button>");
+  window.JST['changes_row'] = _.template("<td>\n  <%= speciesName %>\n</td>\n<td>\n  <span class=\"appendix <%= speciesListing %>\"><%= speciesListing %></span> ->\n  <span class=\"appendix <%= change.get('species_listing_name') %>\"><%= change.get('species_listing_name')%></span>\n</td>\n<td>\n  <%= change.get('applied') ? 'Applied' : 'Not Yet Applied' %>\n</td>\n<td>\n  <button>Apply</button>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -293,7 +294,7 @@
       return ChangeRowView.__super__.constructor.apply(this, arguments);
     }
 
-    ChangeRowView.prototype.tagName = 'li';
+    ChangeRowView.prototype.tagName = 'tr';
 
     ChangeRowView.prototype.template = JST['changes_row'];
 
@@ -308,11 +309,23 @@
     };
 
     ChangeRowView.prototype.render = function() {
-      var species;
-      species = this.model.getSpecies();
+      var speciesListing, speciesName;
+      if (this.model.get('applied')) {
+        this.$el.addClass('applied');
+      } else {
+        this.$el.removeClass('applied');
+      }
+      if (this.model.getSpecies()) {
+        speciesName = this.model.getSpecies().get('full_name');
+        speciesListing = this.model.getSpecies().get('current_listing');
+      } else {
+        speciesName = 'Unknown species';
+        speciesListing = 'Unlisted';
+      }
       return this.$el.html(this.template({
         change: this.model,
-        species: species
+        speciesName: speciesName,
+        speciesListing: speciesListing
       }));
     };
 
