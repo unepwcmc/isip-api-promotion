@@ -341,7 +341,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>Changes outstanding:</h4>\n    <span class=\"value\"><%= outstandingCount %></span>\n  </li>\n  <li>\n    <h4>Changes merged:</h4>\n    <span class=\"value\"><%= appliedCount %></span>\n  </li>\n  <li>\n    <h4>Time saved:</h4>\n    <span class=\"value\"><%= hoursSaved %> Hours</span>\n  </li>\n</ul>");
+  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>MANUAL UPDATE</h4>\n    <h5>CHANGES TO APPLY</h5>\n    <span class=\"value\"><%= manualOutstandingChanges %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= manualTimeRemaining.days %> days, <%= manualTimeRemaining.hours %> hours, <%= manualTimeRemaining.minutes %> minutes</span>\n  </li>\n  <li>\n    <h4>WCMC API</h4>\n    <h5>API CHANGES LEFT TO APPLY</h5>\n    <span class=\"value\"><%= changesLeftToApply %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= apiTimeRemaining %> seconds</span>\n  </li>\n  <li>\n    <h4>WCMC API SAVED</h4>\n    <span class=\"value\"><%= '' %></span>\n  </li>\n</ul>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -352,6 +352,8 @@
     __extends(StatsView, _super);
 
     function StatsView() {
+      this.updateTimers = __bind(this.updateTimers, this);
+
       this.render = __bind(this.render, this);
       return StatsView.__super__.constructor.apply(this, arguments);
     }
@@ -360,19 +362,55 @@
 
     StatsView.prototype.initialize = function(options) {
       this.changeList = options.changeList;
-      this.listenTo(this.changeList, 'sync', this.render);
+      this.listenTo(this.changeList, 'sync', this.resetManualTimer);
       this.listenTo(this.changeList, 'change', this.render);
-      return this.render();
+      return this.resetManualTimer();
     };
 
     StatsView.prototype.render = function() {
-      var appliedCount;
-      appliedCount = this.changeList.appliedChanges().length;
+      var unappliedChanges;
+      unappliedChanges = this.changeList.models.length - this.changeList.appliedChanges().length;
       return this.$el.html(this.template({
-        outstandingCount: this.changeList.outstandingChanges().length,
-        appliedCount: appliedCount,
-        hoursSaved: appliedCount * 5
+        manualOutstandingChanges: Math.round((this.manualTimeRemaining / this.taskTime) + 0.49),
+        manualTimeRemaining: this.secondsAsTime(this.manualTimeRemaining),
+        changesLeftToApply: unappliedChanges,
+        apiTimeRemaining: unappliedChanges
       }));
+    };
+
+    StatsView.prototype.taskTime = 3600;
+
+    StatsView.prototype.resetManualTimer = function() {
+      this.manualTimeRemaining = this.changeList.models.length * this.taskTime;
+      this.timeSpent = 0;
+      if (this.timer != null) {
+        clearTimeout(this.timer);
+      }
+      return this.timer = setTimeout(this.updateTimers, 1000);
+    };
+
+    StatsView.prototype.updateTimers = function() {
+      if (this.manualTimeRemaining > 0) {
+        this.manualTimeRemaining = this.manualTimeRemaining - 1;
+      }
+      this.timeSpent = this.timeSpent + 1;
+      this.render();
+      return this.timer = setTimeout(this.updateTimers, 1000);
+    };
+
+    StatsView.prototype.secondsAsTime = function(seconds) {
+      var roundDown, secondsInHour, secondsInMinute, secondsInWorkDay, times;
+      times = {};
+      roundDown = function(number) {
+        return Math.round(number - 0.5);
+      };
+      secondsInMinute = 60;
+      secondsInHour = secondsInMinute * 60;
+      secondsInWorkDay = secondsInHour * 7.5;
+      times.days = roundDown(seconds / secondsInWorkDay);
+      times.hours = roundDown((seconds - (times.days * secondsInWorkDay)) / secondsInHour);
+      times.minutes = roundDown((seconds - ((times.hours * secondsInHour) + (times.days * secondsInWorkDay))) / secondsInMinute);
+      return times;
     };
 
     StatsView.prototype.onClose = function() {
