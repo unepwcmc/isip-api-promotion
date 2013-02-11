@@ -18,3 +18,14 @@ You can watch the coffeescript in src/compile\_manifest.json directory with:
     diorama compile watch
 
 To get the best out of BackboneDiorama, check the readme at: https://github.com/th3james/BackboneDiorama
+
+### Compiling the CSS
+
+SASS[1] is used for CSS compilation, and so `css/application.scss` should
+be modified, instead of `css/application.css`. You can use the SASS gem
+to watch the `.scss` file for changes and auto-compile:
+
+    gem install sass 
+    sass --watch style.scss:style.css
+
+[1]: http://sass-lang.com/
