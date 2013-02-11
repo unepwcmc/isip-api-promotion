@@ -28,10 +28,10 @@
         
         // Views
         var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
-        $('#stat-header').append(stats_view.el);
+        //$('#stat-header').append(stats_view.el);
 
         var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
-        $('#change-list').append(changes_index_view.el);
+        //$('#change-list').append(changes_index_view.el);
 
         /* 
         var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
@@ -41,9 +41,90 @@
     </script>
   </head>
   <body>
-    <div id="stat-header">
+    <header>
+      <div class="header-inner">
+        <a href="/" class="brand">
+          <img src="img/cites-logo.png" />
+          <!--<h1>ISIP API Promotion</h1>-->
+        </a>
+
+          <nav>
+            <ul>
+                <li><a href="/">About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div id="content">
+      <!--<div class="row">-->
+        <!--<div class="left span2">-->
+          <!--<h2>Discover the WCMC API</h2>-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
+            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
+            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
+            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
+            <!--feugiat ac diam.-->
+          <!--</p>-->
+
+          <!--<p>-->
+            <!--<a href="#" class="btn x-large">-->
+              <!--Try the API and compare-->
+              <!--your results-->
+            <!--</a>-->
+          <!--</p>-->
+        <!--</div>-->
+        <!--<div class="right span2">-->
+          <!--<img src="img/landing-screenshot.png" />-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="row">-->
+        <!--<section class="left span3">-->
+          <!--<h3>Problems with manual updates</h3>-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
+            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
+            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
+            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
+            <!--feugiat ac diam.-->
+          <!--</p>-->
+        <!--</section>-->
+
+        <!--<section class="middle span3">-->
+          <!--<h3>Advantages of the API</h3>-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
+            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
+            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
+            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
+            <!--feugiat ac diam.-->
+          <!--</p>-->
+        <!--</section>-->
+
+        <!--<section class="right span3">-->
+          <!--<h3>How you can use it</h3>-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
+            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
+            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
+            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
+            <!--feugiat ac diam.-->
+          <!--</p>-->
+        <!--</section>-->
+      <!--</div>-->
     </div>
-    <div id="change-list">
-    </div>
+
+    <!--<footer>-->
+      <div class="footer-inner">
+        <!--Some logos-->
+      </div>
+    <!--</footer>-->
   </body>
 </html>
