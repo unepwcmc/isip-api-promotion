@@ -8,6 +8,9 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+
     <script src="js/lib/jquery-1.8.3.min.js"></script>
     <script src="js/lib/json2.js"></script>
     <script src="js/lib/underscore-min.js"></script>
@@ -20,20 +23,19 @@
       $(document).ready(function(){
         window.ISIP = {};
 
-       // window.ISIP.App = new Backbone.Controllers.PageController();
         // Collections
-        //ISIP.speciesList = new Backbone.Collections.SpeciesCollection();
-      //ISIP.speciesList.fetch();
+        ISIP.speciesList = new Backbone.Collections.SpeciesCollection();
+        ISIP.speciesList.fetch();
 
-      //ISIP.changeList = new Backbone.Collections.ChangeCollection();
-      //ISIP.changeList.fetch();
-      //
-      //// Views
-      //var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
-      ////$('#stat-header').append(stats_view.el);
+        ISIP.changeList = new Backbone.Collections.ChangeCollection();
+        ISIP.changeList.fetch();
 
-      //var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
-      ////$('#change-list').append(changes_index_view.el);
+        // Views
+        var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
+        $('#stats').append(stats_view.el);
+
+        var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
+        $('.changes').append(changes_index_view.el);
 
       ///* 
       //var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
@@ -55,49 +57,7 @@
     <div id="content">
       <div class="column-container">
         <div class="colmid">
-          <div class="colleft">
-            <div class="col1">
-              <h3>WCMC API</h3>
-
-              <h4>Changes to apply</h4>
-              <div class="large-number-grid">
-                10000
-                <span>Out Of 15,000</span>
-              </div>
-
-              <h4>Estimated Time</h4>
-              <div class="time-grid">
-                72
-                <span class="hours">11</span>
-                <span class="mins">11</span>
-              </div>
-
-
-            </div>
-            <div class="col2">
-              <h3>Manual Update</h3>
-
-              <h4>Changes to apply</h4>
-              <div class="large-number-grid">
-                10000
-                <span>Out Of 15,000</span>
-              </div>
-
-              <h4>Estimated Time</h4>
-              <div class="time-grid">
-                72
-                <span class="hours">11</span>
-                <span class="mins">11</span>
-              </div>
-            </div>
-            <div class="col3">
-              <h3>The WCMC API Saves</h3>
-              <div class="time-grid">
-                72
-                <span class="hours">11</span>
-                <span class="mins">11</span>
-              </div>
-            </div>
+          <div class="colleft" id="stats">
           </div>
         </div>
       </div>
@@ -112,73 +72,6 @@
       </div>
 
       <div class="row changes">
-        <div class="changes-table">
-          <table>
-            <tr>
-              <td>
-                Loxodonta africana
-                <span class="author">Tesmoingst, Cleton &amp; Verdez, 1997</span>
-              </td>
-              <td>
-                <div class="appendix-change">
-                  <div class="icon i"></div>
-                  <div class="icon ii"></div>
-                </div>
-                <div class="control">
-                  <a href="#" class="btn">Apply</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="empty">
-                New species to be added
-              </td>
-              <td>
-                <div class="new-species">
-                  Loxodonta africana
-                  <span class="author">Tesmoingst, Cleton &amp; Verdez, 1997</span>
-                </div>
-                <div class="control">
-                  <a href="#" class="btn activated">Undo</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Loxodonta africana
-                <span class="author">Tesmoingst, Cleton &amp; Verdez, 1997</span>
-              </td>
-              <td class="empty">
-                No changes for this species
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Loxodonta africana
-                <span class="author">Tesmoingst, Cleton &amp; Verdez, 1997</span>
-              </td>
-              <td>
-                <div class="appendix-change">
-                  <div class="icon iii"></div>
-                  <div class="icon i"></div>
-                </div>
-                <div class="control">
-                  <a href="#" class="btn">Apply</a>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="row changes-table-footer">
-          <div class="left">
-            Total number of species
-            <span class="pull-right">34,000</span>
-          </div>
-          <div class="right">
-            Total changes
-            <span class="pull-right">15,000</span>
-          </div>
-        </div>
       </div>
     </div>
 

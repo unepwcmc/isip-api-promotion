@@ -1,25 +1,46 @@
 window.JST ||= {}
 
 window.JST['stats'] = _.template("""
-  <ul class="stats">
-    <li>
-      <h4>MANUAL UPDATE</h4>
-      <h5>CHANGES TO APPLY</h5>
-      <span class="value"><%= manualOutstandingChanges %></span>
-      <h5>ESTIMATED TIME REMAINING</h5>
-      <span class="value"><%= manualTimeRemaining.days %> days, <%= manualTimeRemaining.hours %> hours, <%= manualTimeRemaining.minutes %> minutes</span>
-    </li>
-    <li>
-      <h4>WCMC API</h4>
-      <h5>API CHANGES LEFT TO APPLY</h5>
-      <span class="value"><%= changesLeftToApply %></span>
-      <h5>ESTIMATED TIME REMAINING</h5>
-      <span class="value"><%= apiTimeRemaining.minutes %> hours, <%= apiTimeRemaining.minutes %> minutes, <%= apiTimeRemaining.seconds %> seconds</span>
-    </li>
-    <li>
-      <h4>WCMC API SAVED</h4>
-      <p>Over <%= appliedChanges %> changes, you saved: </p>
-      <span class="value"><%= timeSaved.hours %> hours, <%= timeSaved.minutes %> minutes</span>
-    </li>
-  </ul>
+  <div class="col1">
+    <h3>WCMC API</h3>
+
+    <h4>Changes to apply</h4>
+    <div class="large-number-grid">
+      <%= changesLeftToApply %>
+      <span>Out Of <%= totalChanges %></span>
+    </div>
+
+    <h4>Estimated Time</h4>
+    <div class="time-grid">
+      <div><%= apiTimeRemaining.days %></div>
+      <span class="hours"><%= apiTimeRemaining.hours %></span>
+      <span class="mins"><%= apiTimeRemaining.minutes %></span>
+    </div>
+  </div>
+
+  <div class="col2">
+    <h3>Manual Update</h3>
+
+    <h4>Changes to apply</h4>
+    <div class="large-number-grid">
+      <%= manualOutstandingChanges %>
+      <span>Out Of <%= totalChanges %></span>
+    </div>
+
+    <h4>Estimated Time</h4>
+    <div class="time-grid">
+      <div><%= manualTimeRemaining.days %></div>
+      <span class="hours"><%= manualTimeRemaining.hours %></span>
+      <span class="mins"><%= manualTimeRemaining.minutes %></span>
+    </div>
+  </div>
+
+  <div class="col3">
+    <h3>The WCMC API Saves</h3>
+    <div class="time-grid">
+      <div><%= timeSaved.days %></div>
+      <span class="hours"><%= timeSaved.hours %></span>
+      <span class="mins"><%= timeSaved.minutes %></span>
+    </div>
+  </div>
 """)

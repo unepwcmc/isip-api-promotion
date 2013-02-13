@@ -17,6 +17,7 @@ class Backbone.Views.StatsView extends Backbone.View
       manualOutstandingChanges: @roundUp(@manualTimeRemaining/@taskTime)
       manualTimeRemaining: @secondsAsTime(@manualTimeRemaining)
       changesLeftToApply: unappliedChanges
+      totalChanges: @changeList.models.length
       apiTimeRemaining: @secondsAsTime(unappliedChanges)
       appliedChanges: appliedChanges
       timeSaved: @secondsAsTime(appliedChanges*@taskTime - appliedChanges)
@@ -35,7 +36,7 @@ class Backbone.Views.StatsView extends Backbone.View
     @manualTimeRemaining = @manualTimeRemaining - 1 if @manualTimeRemaining > 0
     @timeSpent = @timeSpent + 1
     @render()
-    
+
     @timer = setTimeout(@updateTimers, 1000)
 
   roundDown:  (number) ->

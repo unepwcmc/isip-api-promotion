@@ -6,7 +6,7 @@ class Backbone.Views.ChangeRowView extends Backbone.View
   template: JST['changes_row']
 
   events:
-    "click button": "applyChange"
+    "click .btn": "toggleChange"
 
   initialize: (options) ->
     @model = options.model
@@ -18,10 +18,12 @@ class Backbone.Views.ChangeRowView extends Backbone.View
     if @model.getSpecies() 
       speciesName = @model.getSpecies().get('full_name')
       speciesListing = @model.getSpecies().get('current_listing')
+      speciesAuthor = @model.getSpecies().get('author_year')
     else
       speciesName = 'Unknown species'
       speciesListing = 'Unlisted'
-    @$el.html(@template(change: @model, speciesName: speciesName, speciesListing: speciesListing))
+      speciesAuthor = ""
+    @$el.html(@template(change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
 
   applyChange: ->
     @model.applyChange()

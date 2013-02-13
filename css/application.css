@@ -98,9 +98,6 @@ nav {
   font-size: 0.9em; }
 
 footer {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
   height: 120px;
   width: 100%;
   background: #f3f6f9;

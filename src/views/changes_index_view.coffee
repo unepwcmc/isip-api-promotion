@@ -17,11 +17,11 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
 
   render: =>
     @closeSubViews()
-    @$el.html(@template(view: @, changeModels: @changeList.models))
+    @$el.html(@template(view: @, changeModels: @changeList.models, speciesCount: @speciesList.length))
     @renderSubViews()
-    
+
     return @
-  
+
   applyAll: ->
     @changeList.applyAll()
 

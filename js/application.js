@@ -170,13 +170,23 @@
       }
     };
 
-    Change.prototype.applyChange = function() {
+    Change.prototype.toggleChange = function() {
       this.set({
-        applied: true
+        applied: !this.get('applied')
       });
-      return this.getSpecies().set({
-        current_listing: this.get('species_listing_name')
-      });
+      if (this.get('applied') != null) {
+        this.set({
+          previousListing: this.getSpecies().get('current_listing')
+        });
+        this.getSpecies().set({
+          current_listing: this.get('species_listing_name')
+        });
+      } else {
+        this.getSpecies().set({
+          current_listing: this.get('previousListing')
+        });
+      }
+      debugger;
     };
 
     return Change;
@@ -223,7 +233,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<table>\n  <tr>\n    <th>Species</th>\n    <th>Change</th>\n    <th>Status</th>\n    <th><button id=\"apply-all\">Apply All</button></th>\n  </tr>\n  <%\n    var i, il, changeModel;\n    for(i = 0, il=changeModels.length; i<il; i++){\n      changeModel = changeModels[i];\n  %>\n    <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n  <%\n    }\n  %>\n</ul>");
+  window.JST['changes_index'] = _.template("<div class=\"changes-table\">\n  <table>\n    <%\n      var i, il, changeModel;\n      for(i = 0, il=changeModels.length; i<il; i++){\n        changeModel = changeModels[i];\n    %>\n      <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n    <%\n      }\n    %>\n  </table>\n</div>\n<div class=\"row changes-table-footer\">\n  <div class=\"left\">\n    Total number of species\n    <span class=\"pull-right\"><%= speciesCount %></span>\n  </div>\n  <div class=\"right\">\n    Total changes\n    <span class=\"pull-right\"><%= changeModels.length %></span>\n  </div>\n</div>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -257,7 +267,8 @@
       this.closeSubViews();
       this.$el.html(this.template({
         view: this,
-        changeModels: this.changeList.models
+        changeModels: this.changeList.models,
+        speciesCount: this.speciesList.length
       }));
       this.renderSubViews();
       return this;
@@ -279,7 +290,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<td>\n  <%= speciesName %>\n</td>\n<td>\n  <span class=\"appendix <%= speciesListing %>\"><%= speciesListing %></span> ->\n  <span class=\"appendix <%= change.get('species_listing_name') %>\"><%= change.get('species_listing_name')%></span>\n</td>\n<td>\n  <%= change.get('applied') ? 'Applied' : 'Not Yet Applied' %>\n</td>\n<td>\n  <button>Apply</button>\n</td>");
+  window.JST['changes_row'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change\">\n    <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <div class=\"icon <%= change.get('species_listing_name')%>\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -299,7 +310,7 @@
     ChangeRowView.prototype.template = JST['changes_row'];
 
     ChangeRowView.prototype.events = {
-      "click button": "applyChange"
+      "click .btn": "toggleChange"
     };
 
     ChangeRowView.prototype.initialize = function(options) {
@@ -309,7 +320,7 @@
     };
 
     ChangeRowView.prototype.render = function() {
-      var speciesListing, speciesName;
+      var speciesAuthor, speciesListing, speciesName;
       if (this.model.get('applied')) {
         this.$el.addClass('applied');
       } else {
@@ -318,19 +329,22 @@
       if (this.model.getSpecies()) {
         speciesName = this.model.getSpecies().get('full_name');
         speciesListing = this.model.getSpecies().get('current_listing');
+        speciesAuthor = this.model.getSpecies().get('author_year');
       } else {
         speciesName = 'Unknown species';
         speciesListing = 'Unlisted';
+        speciesAuthor = "";
       }
       return this.$el.html(this.template({
         change: this.model,
         speciesName: speciesName,
-        speciesListing: speciesListing
+        speciesListing: speciesListing,
+        speciesAuthor: speciesAuthor
       }));
     };
 
-    ChangeRowView.prototype.applyChange = function() {
-      return this.model.applyChange();
+    ChangeRowView.prototype.toggleChange = function() {
+      return this.model.toggleChange();
     };
 
     ChangeRowView.prototype.onClose = function() {};
@@ -341,7 +355,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['stats'] = _.template("<ul class=\"stats\">\n  <li>\n    <h4>MANUAL UPDATE</h4>\n    <h5>CHANGES TO APPLY</h5>\n    <span class=\"value\"><%= manualOutstandingChanges %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= manualTimeRemaining.days %> days, <%= manualTimeRemaining.hours %> hours, <%= manualTimeRemaining.minutes %> minutes</span>\n  </li>\n  <li>\n    <h4>WCMC API</h4>\n    <h5>API CHANGES LEFT TO APPLY</h5>\n    <span class=\"value\"><%= changesLeftToApply %></span>\n    <h5>ESTIMATED TIME REMAINING</h5>\n    <span class=\"value\"><%= apiTimeRemaining.minutes %> hours, <%= apiTimeRemaining.minutes %> minutes, <%= apiTimeRemaining.seconds %> seconds</span>\n  </li>\n  <li>\n    <h4>WCMC API SAVED</h4>\n    <p>Over <%= appliedChanges %> changes, you saved: </p>\n    <span class=\"value\"><%= timeSaved.hours %> hours, <%= timeSaved.minutes %> minutes</span>\n  </li>\n</ul>");
+  window.JST['stats'] = _.template("<div class=\"col1\">\n  <h3>WCMC API</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= changesLeftToApply %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= apiTimeRemaining.days %></div>\n    <span class=\"hours\"><%= apiTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= apiTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col2\">\n  <h3>Manual Update</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= manualOutstandingChanges %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= manualTimeRemaining.days %></div>\n    <span class=\"hours\"><%= manualTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= manualTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col3\">\n  <h3>The WCMC API Saves</h3>\n  <div class=\"time-grid\">\n    <div><%= timeSaved.days %></div>\n    <span class=\"hours\"><%= timeSaved.hours %></span>\n    <span class=\"mins\"><%= timeSaved.minutes %></span>\n  </div>\n</div>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -375,6 +389,7 @@
         manualOutstandingChanges: this.roundUp(this.manualTimeRemaining / this.taskTime),
         manualTimeRemaining: this.secondsAsTime(this.manualTimeRemaining),
         changesLeftToApply: unappliedChanges,
+        totalChanges: this.changeList.models.length,
         apiTimeRemaining: this.secondsAsTime(unappliedChanges),
         appliedChanges: appliedChanges,
         timeSaved: this.secondsAsTime(appliedChanges * this.taskTime - appliedChanges)

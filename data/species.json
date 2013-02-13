@@ -22,6 +22,7 @@
       "spanish_names": [],
       "french_names": [],
       "synonyms": [],
+      "author_year": "Tesmoingst, Cleton &amp; Verdez, 1997",
       "current_listing_changes": []
   },
   {
@@ -39,6 +40,7 @@
     "rank_name": "SPECIES",
     "species_name": "Abeillei",
     "specific_annotation_symbol": null,
+    "author_year": "Tesmoingst, Cleton &amp; Verdez, 1997",
     "countries_ids": [
       "86",
     "85",
@@ -88,6 +90,7 @@
     "current_listing": "II",
     "family_name": "Schizopathidae",
     "full_name": "Abyssopathes lyra",
+    "author_year": "Tesmoingst, Cleton &amp; Verdez, 1997",
     "generic_annotation_symbol": null,
     "genus_name": "Abyssopathes",
     "id": 6550,
