@@ -1,0 +1,307 @@
+.header-inner,
+#content,
+.footer-inner {
+  width: 768px;
+}
+
+.column-container {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  position:relative; /* This fixes the IE7 overflow hidden bug */
+  clear:both;
+  float:left;
+  width:100%;
+  overflow:hidden;
+
+  .colmid,
+  .colleft {
+    right:33%; /* width of the right column */
+    float:left;
+    width:100%;
+    position:relative;
+  }
+
+  .col1,
+  .col2,
+  .col3 {
+    width: 33%;
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+  }
+
+  .col1 {
+    left:100%;
+  }
+
+  .col2 {
+    left:33%;
+  }
+
+  .col3 {
+    left:67%;
+  }
+}
+
+.column-container {
+  padding: 37px 73px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.large-number-grid,
+.time-grid {
+  margin-top: 15px;
+  font-size: 3.5em;
+  padding-left: 1px;
+}
+
+.large-number-grid {
+  width: 175px;
+  height: 81px;
+  letter-spacing: 0.1em;
+  background: url(/img/large-number.png);
+
+  span {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    position: absolute;
+    right: 33px;
+    font-weight: lighter;
+  }
+}
+
+.time-grid {
+  width: 172px;
+  height: 62px;
+  letter-spacing: 0.15em;
+  background: url(/img/time-grid.png);
+  position: relative;
+
+  .hours,
+  .mins {
+    font-size: 1.2rem;
+    letter-spacing: 0.4em;
+    position: absolute;
+  }
+
+  .mins {
+    bottom: 2px;
+    right: 15px;
+  }
+
+  .hours {
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.row {
+  &.changes-header,
+  &.changes {
+    margin: 0 !important;
+    background-color: #f3f6f9;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  &.changes-header {
+    .left,
+    .right {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 25px 0 25px 0;
+    }
+
+    .left {
+      width: 309px !important;
+      padding-left: 70px;
+      border: 1px solid #e5e5e5;
+      border-left: none;
+      border-right: none;
+      margin: 0 !important;
+    }
+
+    .right {
+      width: 457px !important;
+      padding-left: 20px;
+      border: 1px solid #e5e5e5;
+      border-right: none;
+    }
+  }
+
+  &.changes {
+    padding: 0 54px 45px 54px;
+
+    .changes-table-footer,
+    .changes-table {
+      border: 1px solid #e5e5e5;
+      border-top: none;
+    }
+
+    .changes-table {
+      height: 300px;
+      background: #fff;
+      overflow: scroll;
+
+      table {
+        border-spacing: 0;
+
+        tr {
+          &:last-child {
+            td {
+              border-bottom: 0;
+            }
+          }
+
+          td {
+            padding: 15px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-bottom: 1px solid #e5e5e5;
+            width: 400px;
+            color: #373f4c;
+            font-weight: bold;
+            font-size: 0.9em;
+
+            &:first-child {
+              width: 255px;
+              border-right: 1px solid #e5e5e5;
+            }
+
+            div:first-child {
+              float: left;
+              padding-top: 1em;
+            }
+
+            .appendix-change {
+              width: 155px;
+              background-image: url(/img/arrow.png);
+              background-repeat: no-repeat;
+              background-position: 42px 24px;
+              height: 26px;
+
+              div {
+                &.icon {
+                  height: 26px;
+                  width: 26px;
+                  background-repeat: no-repeat;
+                  background-position: 0px 2px;
+
+                  &.i {
+                    background-image: url(/img/icon-i.png);
+                  }
+
+                  &.ii {
+                    background-image: url(/img/icon-ii.png);
+                  }
+
+                  &.iii {
+                    background-image: url(/img/icon-iii.png);
+                  }
+                }
+
+                &:last-child {
+                  margin-left: 128px;
+                  background-position: 0px;
+                }
+              }
+            }
+
+            .new-species {
+              background-image: url(/img/icon-plus.png);
+              padding-left: 35px;
+              background-repeat: no-repeat;
+              background-position: 0 15px;
+            }
+
+            .control {
+              float: right;
+              border-left: 1px solid #e5e5e5;
+              padding-left: 20px;
+
+              .btn {
+                padding: 10px 15px;
+                border-radius: 27px;
+                width: 59px;
+
+                &.activated {
+                  background-color: #ffb10e;
+
+                  &:hover {
+                    background-color: #ff9933;
+                  }
+                }
+              }
+            }
+
+            &.empty,
+            span.author {
+              color: #cfcfcf;
+              font-weight: normal;
+            }
+
+            span.author {
+              font-size: 0.7em;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .row {
+      &.changes-table-footer {
+        margin: 0 !important;
+        width: 99.7% !important;
+        font-size: 0.7em;
+        color: #666;
+        text-transform: uppercase;
+
+        .pull-right {
+          font-weight: bold;
+          color: #373f4c;
+          font-size: 0.9rem;
+          float: right;
+          line-height: 10px;
+        }
+
+        .left,
+        .right {
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          padding: 20px 15px 20px 15px;
+        }
+
+        .left {
+          width: 255px !important;
+          margin: 0 !important;
+          border-right: 1px solid #e5e5e5;
+        }
+
+        .right {
+          width: 400px !important;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.5em !important;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: normal;
+  }
+}
+
+h4 {
+  font-weight: normal;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 0;
+}

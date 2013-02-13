@@ -12,5 +12,10 @@
   "templates/changes_row",
   "views/change_row_view",
   "templates/stats",
-  "views/stats_view"
+  "views/stats_view",
+  "controllers/page_controller",
+  "templates/page_controller_index",
+  "views/page_controller_index_view",
+  "templates/page_controller_stats",
+  "views/page_controller_stats_view"
 ]

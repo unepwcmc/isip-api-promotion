@@ -1,0 +1,210 @@
+.header-inner,
+#content,
+.footer-inner {
+  width: 768px; }
+
+.column-container {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  position: relative;
+  /* This fixes the IE7 overflow hidden bug */
+  clear: both;
+  float: left;
+  width: 100%;
+  overflow: hidden; }
+  .column-container .colmid,
+  .column-container .colleft {
+    right: 33%;
+    /* width of the right column */
+    float: left;
+    width: 100%;
+    position: relative; }
+  .column-container .col1,
+  .column-container .col2,
+  .column-container .col3 {
+    width: 33%;
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden; }
+  .column-container .col1 {
+    left: 100%; }
+  .column-container .col2 {
+    left: 33%; }
+  .column-container .col3 {
+    left: 67%; }
+
+.column-container {
+  padding: 37px 73px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.large-number-grid,
+.time-grid {
+  margin-top: 15px;
+  font-size: 3.5em;
+  padding-left: 1px; }
+
+.large-number-grid {
+  width: 175px;
+  height: 81px;
+  letter-spacing: 0.1em;
+  background: url(/img/large-number.png); }
+  .large-number-grid span {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    position: absolute;
+    right: 33px;
+    font-weight: lighter; }
+
+.time-grid {
+  width: 172px;
+  height: 62px;
+  letter-spacing: 0.15em;
+  background: url(/img/time-grid.png);
+  position: relative; }
+  .time-grid .hours,
+  .time-grid .mins {
+    font-size: 1.2rem;
+    letter-spacing: 0.4em;
+    position: absolute; }
+  .time-grid .mins {
+    bottom: 2px;
+    right: 15px; }
+  .time-grid .hours {
+    top: 10px;
+    right: 15px; }
+
+.row.changes-header, .row.changes {
+  margin: 0 !important;
+  background-color: #f3f6f9;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+.row.changes-header .left,
+.row.changes-header .right {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 25px 0 25px 0; }
+.row.changes-header .left {
+  width: 309px !important;
+  padding-left: 70px;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+  border-right: none;
+  margin: 0 !important; }
+.row.changes-header .right {
+  width: 457px !important;
+  padding-left: 20px;
+  border: 1px solid #e5e5e5;
+  border-right: none; }
+.row.changes {
+  padding: 0 54px 45px 54px; }
+  .row.changes .changes-table-footer,
+  .row.changes .changes-table {
+    border: 1px solid #e5e5e5;
+    border-top: none; }
+  .row.changes .changes-table {
+    height: 300px;
+    background: #fff;
+    overflow: scroll; }
+    .row.changes .changes-table table {
+      border-spacing: 0; }
+      .row.changes .changes-table table tr:last-child td {
+        border-bottom: 0; }
+      .row.changes .changes-table table tr td {
+        padding: 15px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border-bottom: 1px solid #e5e5e5;
+        width: 400px;
+        color: #373f4c;
+        font-weight: bold;
+        font-size: 0.9em; }
+        .row.changes .changes-table table tr td:first-child {
+          width: 255px;
+          border-right: 1px solid #e5e5e5; }
+        .row.changes .changes-table table tr td div:first-child {
+          float: left;
+          padding-top: 1em; }
+        .row.changes .changes-table table tr td .appendix-change {
+          width: 155px;
+          background-image: url(/img/arrow.png);
+          background-repeat: no-repeat;
+          background-position: 42px 24px;
+          height: 26px; }
+          .row.changes .changes-table table tr td .appendix-change div.icon {
+            height: 26px;
+            width: 26px;
+            background-repeat: no-repeat;
+            background-position: 0px 2px; }
+            .row.changes .changes-table table tr td .appendix-change div.icon.i {
+              background-image: url(/img/icon-i.png); }
+            .row.changes .changes-table table tr td .appendix-change div.icon.ii {
+              background-image: url(/img/icon-ii.png); }
+            .row.changes .changes-table table tr td .appendix-change div.icon.iii {
+              background-image: url(/img/icon-iii.png); }
+          .row.changes .changes-table table tr td .appendix-change div:last-child {
+            margin-left: 128px;
+            background-position: 0px; }
+        .row.changes .changes-table table tr td .new-species {
+          background-image: url(/img/icon-plus.png);
+          padding-left: 35px;
+          background-repeat: no-repeat;
+          background-position: 0 15px; }
+        .row.changes .changes-table table tr td .control {
+          float: right;
+          border-left: 1px solid #e5e5e5;
+          padding-left: 20px; }
+          .row.changes .changes-table table tr td .control .btn {
+            padding: 10px 15px;
+            border-radius: 27px;
+            width: 59px; }
+            .row.changes .changes-table table tr td .control .btn.activated {
+              background-color: #ffb10e; }
+              .row.changes .changes-table table tr td .control .btn.activated:hover {
+                background-color: #ff9933; }
+        .row.changes .changes-table table tr td.empty,
+        .row.changes .changes-table table tr td span.author {
+          color: #cfcfcf;
+          font-weight: normal; }
+        .row.changes .changes-table table tr td span.author {
+          font-size: 0.7em;
+          display: block; }
+  .row.changes .row.changes-table-footer {
+    margin: 0 !important;
+    width: 99.7% !important;
+    font-size: 0.7em;
+    color: #666;
+    text-transform: uppercase; }
+    .row.changes .row.changes-table-footer .pull-right {
+      font-weight: bold;
+      color: #373f4c;
+      font-size: 0.9rem;
+      float: right;
+      line-height: 10px; }
+    .row.changes .row.changes-table-footer .left,
+    .row.changes .row.changes-table-footer .right {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 20px 15px 20px 15px; }
+    .row.changes .row.changes-table-footer .left {
+      width: 255px !important;
+      margin: 0 !important;
+      border-right: 1px solid #e5e5e5; }
+    .row.changes .row.changes-table-footer .right {
+      width: 400px !important; }
+.row h2 {
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: normal; }
+
+h4 {
+  font-weight: normal;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 0; }

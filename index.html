@@ -7,38 +7,6 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <script src="js/lib/jquery-1.8.3.min.js"></script>
-    <script src="js/lib/json2.js"></script>
-    <script src="js/lib/underscore-min.js"></script>
-    <script src="js/lib/backbone-min.js"></script>
-
-    <script src="js/lib/diorama.js"></script>
-
-    <script src="js/application.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        window.ISIP = {};
-        // Collections
-        ISIP.speciesList = new Backbone.Collections.SpeciesCollection();
-        ISIP.speciesList.fetch();
-
-        ISIP.changeList = new Backbone.Collections.ChangeCollection();
-        ISIP.changeList.fetch();
-        
-        // Views
-        var stats_view = new Backbone.Views.StatsView({changeList: ISIP.changeList});
-        //$('#stat-header').append(stats_view.el);
-
-        var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
-        //$('#change-list').append(changes_index_view.el);
-
-        /* 
-        var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
-        $('#left-panel').append(species_index_view.el);
-        */
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -47,84 +15,77 @@
           <img src="img/cites-logo.png" />
           <!--<h1>ISIP API Promotion</h1>-->
         </a>
-
-          <nav>
-            <ul>
-                <li><a href="/">About</a></li>
-            </ul>
-          </nav>
-        </div>
       </div>
     </header>
 
     <div id="content">
-      <!--<div class="row">-->
-        <!--<div class="left span2">-->
-          <!--<h2>Discover the WCMC API</h2>-->
-          <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
-            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
-            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
-            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
-            <!--feugiat ac diam.-->
-          <!--</p>-->
+      <div class="row">
+        <div class="left span2">
+          <h2>Discover the WCMC API</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            ac magna risus. Pellentesque elementum vehicula turpis eget
+            vulputate. Fusce tellus massa, scelerisque vel condimentum id,
+            feugiat ac diam.
+          </p>
 
-          <!--<p>-->
-            <!--<a href="#" class="btn x-large">-->
-              <!--Try the API and compare-->
-              <!--your results-->
-            <!--</a>-->
-          <!--</p>-->
-        <!--</div>-->
-        <!--<div class="right span2">-->
-          <!--<img src="img/landing-screenshot.png" />-->
-        <!--</div>-->
-      <!--</div>-->
+          <p>
+            <a href="stats.html" id="show-stats" class="btn x-large">
+              Try the API and compare
+              your results
+            </a>
+          </p>
+        </div>
+        <div class="right span2">
+          <img src="img/landing-screenshot.png" />
+        </div>
+      </div>
 
-      <!--<div class="row">-->
-        <!--<section class="left span3">-->
-          <!--<h3>Problems with manual updates</h3>-->
-          <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
-            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
-            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
-            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
-            <!--feugiat ac diam.-->
-          <!--</p>-->
-        <!--</section>-->
+      <div class="row">
+        <section class="left span3">
+          <h3>Problems with manual updates</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            ac magna risus. Pellentesque elementum vehicula turpis eget
+            vulputate. Fusce tellus massa, scelerisque vel condimentum id,
+            feugiat ac diam.
+          </p>
+        </section>
 
-        <!--<section class="middle span3">-->
-          <!--<h3>Advantages of the API</h3>-->
-          <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
-            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
-            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
-            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
-            <!--feugiat ac diam.-->
-          <!--</p>-->
-        <!--</section>-->
+        <section class="middle span3">
+          <h3>Advantages of the API</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            ac magna risus. Pellentesque elementum vehicula turpis eget
+            vulputate. Fusce tellus massa, scelerisque vel condimentum id,
+            feugiat ac diam.
+          </p>
+        </section>
 
-        <!--<section class="right span3">-->
-          <!--<h3>How you can use it</h3>-->
-          <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla-->
-            <!--pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras-->
-            <!--ac magna risus. Pellentesque elementum vehicula turpis eget-->
-            <!--vulputate. Fusce tellus massa, scelerisque vel condimentum id,-->
-            <!--feugiat ac diam.-->
-          <!--</p>-->
-        <!--</section>-->
-      <!--</div>-->
+        <section class="right span3">
+          <h3>How you can use it</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            pulvinar erat vitae sapien rhoncus ut blandit sem vehicula.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            ac magna risus. Pellentesque elementum vehicula turpis eget
+            vulputate. Fusce tellus massa, scelerisque vel condimentum id,
+            feugiat ac diam.
+          </p>
+        </section>
+      </div>
     </div>
 
     <!--<footer>-->
-      <div class="footer-inner">
+      <!--<div class="footer-inner">-->
         <!--Some logos-->
-      </div>
+      <!--</div>-->
     <!--</footer>-->
   </body>
 </html>
