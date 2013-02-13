@@ -2,10 +2,10 @@ window.JST ||= {}
 
 window.JST['changes_index'] = _.template("""
   <div class="row changes-header">
-    <div class="left span2">
+    <div class="left">
       <h2>Species</h2>
     </div>
-    <div class="right span2">
+    <div class="right">
       <h2>COP 15 Changes</h2>
       <a id="toggle-all" class="btn">Apply All</a>
     </div>

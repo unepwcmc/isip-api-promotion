@@ -3,7 +3,7 @@
 .header-inner,
 #content,
 .footer-inner {
-  width: 768px !important;
+  width: 768px;
 }
 
 .column-container {
@@ -115,7 +115,7 @@
 .row {
   &.changes-header,
   &.changes {
-    margin: 0 !important;
+    margin: 0;
     background-color: #f3f6f9;
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
@@ -132,16 +132,16 @@
     }
 
     .left {
-      width: 309px !important;
+      width: 309px;
       padding-left: 70px;
       border: 1px solid #e5e5e5;
       border-left: none;
       border-right: none;
-      margin: 0 !important;
+      margin: 0;
     }
 
     .right {
-      width: 457px !important;
+      width: 457px;
       padding-left: 20px;
       border: 1px solid #e5e5e5;
       border-right: none;
@@ -286,8 +286,7 @@
 
     .row {
       &.changes-table-footer {
-        margin: 0 !important;
-        width: 99.7% !important;
+        margin: 0;
         font-size: 0.7em;
         color: #666;
         text-transform: uppercase;
@@ -308,20 +307,20 @@
         }
 
         .left {
-          width: 255px !important;
-          margin: 0 !important;
+          width: 255px;
+          margin: 0;
           border-right: 1px solid #e5e5e5;
         }
 
         .right {
-          width: 400px !important;
+          width: 400px;
         }
       }
     }
   }
 
   h2 {
-    font-size: 1.5em !important;
+    font-size: 1.5em;
     text-transform: uppercase;
     color: #666;
     font-weight: normal;
