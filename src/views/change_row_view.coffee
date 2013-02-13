@@ -25,7 +25,7 @@ class Backbone.Views.ChangeRowView extends Backbone.View
       speciesAuthor = ""
     @$el.html(@template(change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
 
-  applyChange: ->
-    @model.applyChange()
+  toggleChange: ->
+    @model.toggleChange()
 
   onClose: ->

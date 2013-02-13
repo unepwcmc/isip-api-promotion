@@ -11,7 +11,11 @@ class window.Backbone.Models.Change extends Backbone.Model
     else
       return @species = ISIP.speciesList.where({id: @get('taxon_concept_id')})[0]
 
-  applyChange: ->
-    @set(applied: true)
-    @getSpecies().set(current_listing: @get('species_listing_name'))
+  toggleChange: ->
+    @set(applied: !@get('applied'))
 
+    if @get('applied')
+      @set(previousListing: @getSpecies().get('current_listing'))
+      @getSpecies().set(current_listing: @get('species_listing_name'))
+    else
+      @getSpecies().set(current_listing: @get('previousListing'))

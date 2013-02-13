@@ -174,19 +174,18 @@
       this.set({
         applied: !this.get('applied')
       });
-      if (this.get('applied') != null) {
+      if (this.get('applied')) {
         this.set({
           previousListing: this.getSpecies().get('current_listing')
         });
-        this.getSpecies().set({
+        return this.getSpecies().set({
           current_listing: this.get('species_listing_name')
         });
       } else {
-        this.getSpecies().set({
+        return this.getSpecies().set({
           current_listing: this.get('previousListing')
         });
       }
-      debugger;
     };
 
     return Change;
