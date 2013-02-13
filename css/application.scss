@@ -1,8 +1,11 @@
+@import "mixins.scss";
+
 body {
   font-family: Helvetica, Verdana, Tahoma;
 
   a {
     color: #33536a;
+    text-decoration: none;
 
     &:hover {
       color: #1D2F3D;
@@ -25,19 +28,23 @@ header {
 
   h1 {
     display: block;
-    float: left;
     padding: 10px 20px 10px;
-    margin-left: -20px;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 200;
     text-shadow: 0 1px 0 #ffffff;
+
+    background: url(../img/cites-logo.png);
+    background-repeat: no-repeat;
+    @include image-2x("../img/cites-logo@2x.png", "100px", "57px");
+    padding-top: 72px;
+    padding-left: 0;
   }
 }
 
 .header-inner {
-  height: 85px;
+  height: 100px;
   padding-right: 20px;
   padding-left: 20px;
   padding-right: 0;
@@ -148,8 +155,18 @@ footer {
   border-top: 1px solid #e5e5e5;
 }
 
+/*
+  Hide footer on tablets
+*/
+@include tablet-only {
+  footer {
+    display: none;
+  }
+}
+
 .btn {
   display: inline-block;
+  cursor: pointer;
   color: #fff;
   margin: 4px 0;
   line-height: 24px;
