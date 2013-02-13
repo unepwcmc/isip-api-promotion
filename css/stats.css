@@ -7,7 +7,7 @@
 .header-inner,
 #content,
 .footer-inner {
-  width: 768px; }
+  width: 768px !important; }
 
 .column-container {
   border-left: 1px solid #e5e5e5;
@@ -125,7 +125,14 @@
   width: 457px !important;
   padding-left: 20px;
   border: 1px solid #e5e5e5;
-  border-right: none; }
+  border-right: none;
+  position: relative; }
+  .row.changes-header .right h2 {
+    display: inline; }
+  .row.changes-header .right .btn {
+    position: absolute;
+    right: 67px;
+    bottom: 20px; }
 .row.changes {
   padding: 0 54px 45px 54px; }
   .row.changes .changes-table-footer,
@@ -133,7 +140,7 @@
     border: 1px solid #e5e5e5;
     border-top: none; }
   .row.changes .changes-table {
-    height: 310px;
+    height: 285px;
     background: #fff;
     overflow: scroll; }
     .row.changes .changes-table table {

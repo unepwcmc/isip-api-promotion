@@ -3,7 +3,7 @@
 .header-inner,
 #content,
 .footer-inner {
-  width: 768px;
+  width: 768px !important;
 }
 
 .column-container {
@@ -145,6 +145,17 @@
       padding-left: 20px;
       border: 1px solid #e5e5e5;
       border-right: none;
+      position: relative;
+
+      h2 {
+        display: inline;
+      }
+
+      .btn {
+        position: absolute;
+        right: 67px;
+        bottom: 20px;
+      }
     }
   }
 
@@ -158,7 +169,7 @@
     }
 
     .changes-table {
-      height: 310px;
+      height: 285px;
       background: #fff;
       overflow: scroll;
 

@@ -5,7 +5,8 @@
   https://gist.github.com/anthonyshort/2028061
 */
 body {
-  font-family: Helvetica, Verdana, Tahoma; }
+  font-family: Helvetica, Verdana, Tahoma;
+  margin: 0; }
   body a {
     color: #33536a;
     text-decoration: none; }
@@ -23,7 +24,8 @@ header {
   margin-bottom: 0;
   top: 0;
   border-bottom: 1px solid #e5e5e5;
-  background: #fff; }
+  background: #fff;
+  padding-top: 10px; }
   header h1 {
     display: block;
     padding: 10px 20px 10px;
@@ -41,7 +43,7 @@ header {
         /* on retina, use image
          * that's scaled by 2 */
         background-image: url("../img/cites-logo@2x.png");
-        background-size: "100px" "57px"; } }
+        background-size: 100px 57px; } }
 
 .header-inner {
   height: 100px;
@@ -114,14 +116,24 @@ nav {
 
 footer {
   height: 120px;
-  width: 100%;
   background: #f3f6f9;
-  border-top: 1px solid #e5e5e5; }
+  border-top: 1px solid #e5e5e5;
+  clear: both;
+  float: left;
+  width: 100%; }
+  footer .footer-inner {
+    padding-top: 10px;
+    width: 900px;
+    margin: 0 auto; }
 
 /*
   Hide footer on tablets
 */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .header-inner {
+    padding-left: 15px;
+    box-sizing: border-box; }
+
   footer {
     display: none; } }
 .btn {

@@ -2,6 +2,7 @@
 
 body {
   font-family: Helvetica, Verdana, Tahoma;
+  margin: 0;
 
   a {
     color: #33536a;
@@ -25,6 +26,7 @@ header {
   top: 0;
   border-bottom: 1px solid #e5e5e5;
   background: #fff;
+  padding-top: 10px;
 
   h1 {
     display: block;
@@ -37,7 +39,7 @@ header {
 
     background: url(../img/cites-logo.png);
     background-repeat: no-repeat;
-    @include image-2x("../img/cites-logo@2x.png", "100px", "57px");
+    @include image-2x("../img/cites-logo@2x.png", 100px, 57px);
     padding-top: 72px;
     padding-left: 0;
   }
@@ -150,15 +152,28 @@ nav {
 
 footer {
   height: 120px;
-  width: 100%;
   background: #f3f6f9;
   border-top: 1px solid #e5e5e5;
+  clear:both;
+  float:left;
+  width:100%;
+
+  .footer-inner {
+    padding-top: 10px;
+    width: 900px;
+    margin: 0 auto;
+  }
 }
 
 /*
   Hide footer on tablets
 */
 @include tablet-only {
+  .header-inner {
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
   footer {
     display: none;
   }
