@@ -35,7 +35,7 @@
         $('#stats').append(stats_view.el);
 
         var changes_index_view = new Backbone.Views.ChangesIndexView({changeList: ISIP.changeList, speciesList: ISIP.speciesList});
-        $('.changes').append(changes_index_view.el);
+        $('#changes').append(changes_index_view.el);
 
       ///* 
       //var species_index_view = new Backbone.Views.SpeciesIndexView({speciesList: ISIP.speciesList});
@@ -61,17 +61,7 @@
         </div>
       </div>
 
-      <div class="row changes-header">
-        <div class="left span2">
-          <h2>Species</h2>
-        </div>
-        <div class="right span2">
-          <h2>COP 15 Changes</h2>
-          <a class="btn">Apply All</a>
-        </div>
-      </div>
-
-      <div class="row changes">
+      <div id="changes">
       </div>
     </div>
 

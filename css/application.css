@@ -12,6 +12,8 @@ body {
     text-decoration: none; }
     body a:hover {
       color: #1D2F3D; }
+  body p {
+    line-height: 1.4em; }
 
 header {
   *position: relative;

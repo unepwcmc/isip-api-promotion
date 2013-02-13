@@ -208,9 +208,9 @@
 
     ChangeCollection.prototype.url = "data/changes.json";
 
-    ChangeCollection.prototype.applyAll = function() {
+    ChangeCollection.prototype.toggleAll = function() {
       return this.each(function(model) {
-        return model.applyChange();
+        return model.toggleChange();
       });
     };
 
@@ -232,7 +232,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<div class=\"changes-table\">\n  <table>\n    <%\n      var i, il, changeModel;\n      for(i = 0, il=changeModels.length; i<il; i++){\n        changeModel = changeModels[i];\n    %>\n      <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n    <%\n      }\n    %>\n  </table>\n</div>\n<div class=\"row changes-table-footer\">\n  <div class=\"left\">\n    Total number of species\n    <span class=\"pull-right\"><%= speciesCount %></span>\n  </div>\n  <div class=\"right\">\n    Total changes\n    <span class=\"pull-right\"><%= changeModels.length %></span>\n  </div>\n</div>");
+  window.JST['changes_index'] = _.template("<div class=\"row changes-header\">\n  <div class=\"left span2\">\n    <h2>Species</h2>\n  </div>\n  <div class=\"right span2\">\n    <h2>COP 15 Changes</h2>\n    <a id=\"toggle-all\" class=\"btn\">Apply All</a>\n  </div>\n</div>\n\n<div class=\"row changes\">\n  <div class=\"changes-table\">\n    <table>\n      <%\n        var i, il, changeModel;\n        for(i = 0, il=changeModels.length; i<il; i++){\n          changeModel = changeModels[i];\n      %>\n        <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n      <%\n        }\n      %>\n    </table>\n  </div>\n  <div class=\"row changes-table-footer\">\n    <div class=\"left\">\n      Total number of species\n      <span class=\"pull-right\"><%= speciesCount %></span>\n    </div>\n    <div class=\"right\">\n      Total changes\n      <span class=\"pull-right\"><%= changeModels.length %></span>\n    </div>\n  </div>\n</div>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -250,7 +250,7 @@
     ChangesIndexView.prototype.template = JST['changes_index'];
 
     ChangesIndexView.prototype.events = {
-      "click #apply-all": "applyAll"
+      "click #toggle-all": "toggleAll"
     };
 
     ChangesIndexView.prototype.initialize = function(options) {
@@ -273,8 +273,8 @@
       return this;
     };
 
-    ChangesIndexView.prototype.applyAll = function() {
-      return this.changeList.applyAll();
+    ChangesIndexView.prototype.toggleAll = function(e) {
+      return this.changeList.toggleAll();
     };
 
     ChangesIndexView.prototype.onClose = function() {
@@ -342,7 +342,7 @@
       }));
     };
 
-    ChangeRowView.prototype.toggleChange = function() {
+    ChangeRowView.prototype.toggleChange = function(e) {
       return this.model.toggleChange();
     };
 
