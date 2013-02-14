@@ -225,10 +225,6 @@
             padding: 10px 15px;
             border-radius: 27px;
             width: 59px; }
-            .row.changes .changes-table table tr td .control .btn.activated {
-              background-color: #ffb10e; }
-              .row.changes .changes-table table tr td .control .btn.activated:hover {
-                background-color: #ff9933; }
         .row.changes .changes-table table tr td.empty,
         .row.changes .changes-table table tr td span.author {
           color: #cfcfcf;

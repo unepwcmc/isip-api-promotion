@@ -206,4 +206,12 @@ footer {
     font-weight: normal;
     line-height: 1em;
   }
+
+  &.activated {
+    background-color: #ffb10e;
+
+    &:hover {
+      background-color: #ff9933;
+    }
+  }
 }

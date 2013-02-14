@@ -5,7 +5,8 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
   template: JST['changes_index']
 
   events:
-    "click #toggle-all": "toggleAll"
+    "click #apply-all" : "applyAll"
+    "click #undo-all"  : "undoAll"
 
   initialize: (options) ->
     @changeList = options.changeList
@@ -17,13 +18,18 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
 
   render: =>
     @closeSubViews()
-    @$el.html(@template(view: @, changeModels: @changeList.models, speciesCount: @speciesList.length))
+    @$el.html(@template(view: @, changeList: @changeList, speciesCount: @speciesList.length))
     @renderSubViews()
 
     return @
 
-  toggleAll: (e) ->
-    @changeList.toggleAll()
+  undoAll: (e) ->
+    @changeList.undoAll()
+    @render()
+
+  applyAll: (e) ->
+    @changeList.applyAll()
+    @render()
 
   onClose: ->
     @stopListening(@changeList, 'sync', @render)

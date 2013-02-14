@@ -6,6 +6,16 @@ class Backbone.Collections.ChangeCollection extends Backbone.Collection
 
   url: "data/changes.json"
 
+  applyAll: ->
+    @each((model)->
+      model.applyChange()
+    )
+
+  undoAll: ->
+    @each((model)->
+      model.undoChange()
+    )
+
   toggleAll: ->
     @each((model)->
       model.toggleChange()

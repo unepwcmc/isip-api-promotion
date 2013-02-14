@@ -159,3 +159,7 @@ footer {
     padding: 20px;
     font-weight: normal;
     line-height: 1em; }
+  .btn.activated {
+    background-color: #ffb10e; }
+    .btn.activated:hover {
+      background-color: #ff9933; }

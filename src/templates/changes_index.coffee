@@ -7,7 +7,11 @@ window.JST['changes_index'] = _.template("""
     </div>
     <div class="right">
       <h2>COP 15 Changes</h2>
-      <a id="toggle-all" class="btn">Apply All</a>
+      <% if (changeList.outstandingChanges().length > 0) { %>
+        <a id="apply-all" class="btn">Apply All</a>
+      <% } else { %>
+        <a id="undo-all" class="btn activated">Undo All</a>
+      <% } %>
     </div>
   </div>
 
@@ -16,6 +20,7 @@ window.JST['changes_index'] = _.template("""
       <table>
         <%
           var i, il, changeModel;
+          var changeModels = changeList.models;
           for(i = 0, il=changeModels.length; i<il; i++){
             changeModel = changeModels[i];
         %>

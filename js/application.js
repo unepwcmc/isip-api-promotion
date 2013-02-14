@@ -170,6 +170,27 @@
       }
     };
 
+    Change.prototype.applyChange = function() {
+      this.set({
+        applied: true
+      });
+      this.set({
+        previousListing: this.getSpecies().get('current_listing')
+      });
+      return this.getSpecies().set({
+        current_listing: this.get('species_listing_name')
+      });
+    };
+
+    Change.prototype.undoChange = function() {
+      this.set({
+        applied: false
+      });
+      return this.getSpecies().set({
+        current_listing: this.get('previousListing')
+      });
+    };
+
     Change.prototype.toggleChange = function() {
       this.set({
         applied: !this.get('applied')
@@ -208,6 +229,18 @@
 
     ChangeCollection.prototype.url = "data/changes.json";
 
+    ChangeCollection.prototype.applyAll = function() {
+      return this.each(function(model) {
+        return model.applyChange();
+      });
+    };
+
+    ChangeCollection.prototype.undoAll = function() {
+      return this.each(function(model) {
+        return model.undoChange();
+      });
+    };
+
     ChangeCollection.prototype.toggleAll = function() {
       return this.each(function(model) {
         return model.toggleChange();
@@ -232,7 +265,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_index'] = _.template("<div class=\"row changes-header\">\n  <div class=\"left\">\n    <h2>Species</h2>\n  </div>\n  <div class=\"right\">\n    <h2>COP 15 Changes</h2>\n    <a id=\"toggle-all\" class=\"btn\">Apply All</a>\n  </div>\n</div>\n\n<div class=\"row changes\">\n  <div class=\"changes-table\">\n    <table>\n      <%\n        var i, il, changeModel;\n        for(i = 0, il=changeModels.length; i<il; i++){\n          changeModel = changeModels[i];\n      %>\n        <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n      <%\n        }\n      %>\n    </table>\n  </div>\n  <div class=\"row changes-table-footer\">\n    <div class=\"left\">\n      Total number of species\n      <span class=\"pull-right\"><%= speciesCount %></span>\n    </div>\n    <div class=\"right\">\n      Total changes\n      <span class=\"pull-right\"><%= changeModels.length %></span>\n    </div>\n  </div>\n</div>");
+  window.JST['changes_index'] = _.template("<div class=\"row changes-header\">\n  <div class=\"left\">\n    <h2>Species</h2>\n  </div>\n  <div class=\"right\">\n    <h2>COP 15 Changes</h2>\n    <% if (changeList.outstandingChanges().length > 0) { %>\n      <a id=\"apply-all\" class=\"btn\">Apply All</a>\n    <% } else { %>\n      <a id=\"undo-all\" class=\"btn activated\">Undo All</a>\n    <% } %>\n  </div>\n</div>\n\n<div class=\"row changes\">\n  <div class=\"changes-table\">\n    <table>\n      <%\n        var i, il, changeModel;\n        var changeModels = changeList.models;\n        for(i = 0, il=changeModels.length; i<il; i++){\n          changeModel = changeModels[i];\n      %>\n        <%= view.addSubView(new Backbone.Views.ChangeRowView({model: changeModel})) %>\n      <%\n        }\n      %>\n    </table>\n  </div>\n  <div class=\"row changes-table-footer\">\n    <div class=\"left\">\n      Total number of species\n      <span class=\"pull-right\"><%= speciesCount %></span>\n    </div>\n    <div class=\"right\">\n      Total changes\n      <span class=\"pull-right\"><%= changeModels.length %></span>\n    </div>\n  </div>\n</div>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -250,7 +283,8 @@
     ChangesIndexView.prototype.template = JST['changes_index'];
 
     ChangesIndexView.prototype.events = {
-      "click #toggle-all": "toggleAll"
+      "click #apply-all": "applyAll",
+      "click #undo-all": "undoAll"
     };
 
     ChangesIndexView.prototype.initialize = function(options) {
@@ -266,15 +300,21 @@
       this.closeSubViews();
       this.$el.html(this.template({
         view: this,
-        changeModels: this.changeList.models,
+        changeList: this.changeList,
         speciesCount: this.speciesList.length
       }));
       this.renderSubViews();
       return this;
     };
 
-    ChangesIndexView.prototype.toggleAll = function(e) {
-      return this.changeList.toggleAll();
+    ChangesIndexView.prototype.undoAll = function(e) {
+      this.changeList.undoAll();
+      return this.render();
+    };
+
+    ChangesIndexView.prototype.applyAll = function(e) {
+      this.changeList.applyAll();
+      return this.render();
     };
 
     ChangesIndexView.prototype.onClose = function() {
