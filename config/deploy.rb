@@ -1,7 +1,5 @@
 ## Generated with 'brightbox' on 2013-02-14 13:33:07 +0000
-gem 'brightbox', '>=2.3.9'
-require 'brightbox/recipes'
-require 'brightbox/passenger'
+require 'bundler/capistrano'
 
 # The name of your application.  Used for deployment directory and filenames
 # and Apache configs. Should be unique on the Brightbox
@@ -9,9 +7,10 @@ set :application, "isip-api-promo"
 
 # Primary domain name of your application. Used in the Apache configs
 set :domain, "future.unep-wcmc.org"
+set :user, 'rails'
 
 ## List of servers
-server "unepwcmc-005.vm.brightbox.net", :app, :web, :db, :primary => true
+server "unepwcmc-004.vm.brightbox.net", :app, :web, :db, :primary => true
 
 # Target directory for the application on the web and app servers.
 set(:deploy_to) { File.join("", "home", user, application) }
@@ -20,9 +19,11 @@ set(:deploy_to) { File.join("", "home", user, application) }
 # the local directory.  You should probably change this if you use
 # another repository, like git or subversion.
 
-set :repository, "."
-set :scm, :none
-set :deploy_via, :copy
+set :repository, "git@github.com:unepwcmc/isip-api-promotion.git"
+set :branch, "master"
+set :scm, :git
+set :scm_username, "unepwcmc-read"
+set :deploy_via, :remote_cache
 
 ### Other options you can set ##
 # Comma separated list of additional domains for Apache
