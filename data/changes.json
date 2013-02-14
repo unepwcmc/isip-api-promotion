@@ -128,5 +128,31 @@
     "species_listing_name": "I",
     "symbol": null,
     "taxon_concept_id": 2068
+  },
+  {
+    "change_type_id": 8,
+    "change_type_name": "NEW_SPECIES",
+    "countries_ids_ary": null,
+    "dirty": false,
+    "effective_at": "2003-02-13T00:00:00Z",
+    "english_full_note": null,
+    "english_short_note": null,
+    "expiry": null,
+    "french_full_note": null,
+    "french_short_note": null,
+    "generic_english_full_note": null,
+    "generic_french_full_note": null,
+    "generic_spanish_full_note": null,
+    "id": 9012,
+    "is_current": true,
+    "parent_symbol": null,
+    "party_id": null,
+    "party_name": null,
+    "spanish_full_note": null,
+    "spanish_short_note": null,
+    "species_listing_id": 1,
+    "species_listing_name": "I",
+    "symbol": null,
+    "taxon_concept_id": 2069
   }
 ]

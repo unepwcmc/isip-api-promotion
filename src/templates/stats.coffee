@@ -37,7 +37,7 @@ window.JST['stats'] = _.template("""
 
   <div class="col3">
     <h3>The UNEP-WCMC API Saves</h3>
-    <div class="time-grid">
+    <div class="time-grid time-saved">
       <div><%= timeSaved.days %></div>
       <span class="hours"><%= timeSaved.hours %></span>
       <span class="mins"><%= timeSaved.minutes %></span>

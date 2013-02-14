@@ -329,7 +329,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change\">\n    <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <div class=\"icon <%= change.get('species_listing_name')%>\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+  window.JST['changes_row'] = _.template("<% if (change.get('change_type_name') === 'NEW_SPECIES') { %>\n<td class=\"empty\">\n  New species to be added\n</td>\n<td>\n  <div class=\"new-species\">\n    <%= speciesName %>\n    <span class=\"author\"><%= speciesAuthor %></span>\n  </div>\n<% } else { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change\">\n    <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <div class=\"icon <%= change.get('species_listing_name')%>\"></div>\n  </div>\n<% } %>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -394,7 +394,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['stats'] = _.template("<div class=\"col1\">\n  <h3>UNEP-WCMC API</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= changesLeftToApply %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= apiTimeRemaining.days %></div>\n    <span class=\"hours\"><%= apiTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= apiTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col2\">\n  <h3>Manual Update</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= manualOutstandingChanges %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= manualTimeRemaining.days %></div>\n    <span class=\"hours\"><%= manualTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= manualTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col3\">\n  <h3>The UNEP-WCMC API Saves</h3>\n  <div class=\"time-grid\">\n    <div><%= timeSaved.days %></div>\n    <span class=\"hours\"><%= timeSaved.hours %></span>\n    <span class=\"mins\"><%= timeSaved.minutes %></span>\n  </div>\n</div>");
+  window.JST['stats'] = _.template("<div class=\"col1\">\n  <h3>UNEP-WCMC API</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= changesLeftToApply %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= apiTimeRemaining.days %></div>\n    <span class=\"hours\"><%= apiTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= apiTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col2\">\n  <h3>Manual Update</h3>\n\n  <h4>Changes to apply</h4>\n  <div class=\"large-number-grid\">\n    <%= manualOutstandingChanges %>\n    <span>Out Of <%= totalChanges %></span>\n  </div>\n\n  <h4>Estimated Time</h4>\n  <div class=\"time-grid\">\n    <div><%= manualTimeRemaining.days %></div>\n    <span class=\"hours\"><%= manualTimeRemaining.hours %></span>\n    <span class=\"mins\"><%= manualTimeRemaining.minutes %></span>\n  </div>\n</div>\n\n<div class=\"col3\">\n  <h3>The UNEP-WCMC API Saves</h3>\n  <div class=\"time-grid time-saved\">\n    <div><%= timeSaved.days %></div>\n    <span class=\"hours\"><%= timeSaved.hours %></span>\n    <span class=\"mins\"><%= timeSaved.minutes %></span>\n  </div>\n</div>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -435,7 +435,7 @@
       }));
     };
 
-    StatsView.prototype.taskTime = 3600;
+    StatsView.prototype.taskTime = 600;
 
     StatsView.prototype.resetManualTimer = function() {
       this.manualTimeRemaining = this.changeList.models.length * this.taskTime;

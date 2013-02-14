@@ -86,6 +86,8 @@
        * that's scaled by 2 */
       background-image: url("../img/time-grid@2x.png");
       background-size: 172px 62px; } }
+  .time-grid.time-saved {
+    margin-top: 47px; }
   .time-grid div {
     width: 76px;
     height: 60px;
@@ -207,6 +209,7 @@
             margin-left: 128px;
             background-position: 0px; }
         .row.changes .changes-table table tr td .new-species {
+          height: 28px;
           background-image: url(../img/icon-plus.png);
           padding-left: 35px;
           background-repeat: no-repeat;

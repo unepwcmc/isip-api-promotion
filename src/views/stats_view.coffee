@@ -23,7 +23,7 @@ class Backbone.Views.StatsView extends Backbone.View
       timeSaved: @secondsAsTime(appliedChanges*@taskTime - appliedChanges)
     ))
 
-  taskTime: 3600
+  taskTime: 600
 
   resetManualTimer: ->
     @manualTimeRemaining = @changeList.models.length*@taskTime
