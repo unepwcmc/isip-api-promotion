@@ -117,10 +117,29 @@ footer {
   border-top: 1px solid #e5e5e5;
   clear: both;
   float: left;
-  width: 100%; }
+  width: 100%;
+  padding-top: 20px; }
   footer .footer-inner {
     padding-top: 10px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
+    footer .footer-inner img {
+      /* line up with bottom of "powered by" text */
+      margin-top: 0.5em;
+      float: left; }
+      footer .footer-inner img:first-child {
+        padding-right: 10px; }
+  footer .powered-by {
+    font-size: 0.5em; }
+    footer .powered-by img {
+      display: block;
+      margin: 0;
+      padding: 0 !important;
+      position: absolute;
+      right: 0; }
+
+.pull-right {
+  float: right; }
 
 /*
   Hide footer on tablets

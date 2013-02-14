@@ -154,11 +154,39 @@ footer {
   clear:both;
   float:left;
   width:100%;
+  padding-top: 20px;
 
   .footer-inner {
     padding-top: 10px;
     margin: 0 auto;
+    position: relative;
+
+    img {
+      /* line up with bottom of "powered by" text */
+      margin-top: 0.5em;
+      float: left;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+    }
   }
+
+  .powered-by {
+    font-size: 0.5em;
+
+    img {
+      display: block;
+      margin: 0;
+      padding: 0 !important;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.pull-right {
+  float: right;
 }
 
 /*
