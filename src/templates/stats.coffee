@@ -2,7 +2,7 @@ window.JST ||= {}
 
 window.JST['stats'] = _.template("""
   <div class="col1">
-    <h3>WCMC API</h3>
+    <h3>UNEP-WCMC API</h3>
 
     <h4>Changes to apply</h4>
     <div class="large-number-grid">
@@ -36,7 +36,7 @@ window.JST['stats'] = _.template("""
   </div>
 
   <div class="col3">
-    <h3>The WCMC API Saves</h3>
+    <h3>The UNEP-WCMC API Saves</h3>
     <div class="time-grid">
       <div><%= timeSaved.days %></div>
       <span class="hours"><%= timeSaved.hours %></span>
