@@ -1,8 +1,7 @@
 Animal/Plan,Scientific Name,Author,Rank,ID,English Common Name,listing,effective_from,Change Type,Type of Change,Relevant Listing
 Animal,Canis lupus,"Linnaeus, 1758",Species,3746,Grey Wolf,II,23/06/2010,Change to annotation,ANNOTATION,II
 Animal,Canis lupus,"Linnaeus, 1758",Species,3746,Grey Wolf,I,23/06/2010,Change to annotation,ANNOTATION,I
-Animal,Crocodylus moreletii,"Dumeril, Bibron & Dumeril, 1851",Species,5663,Belize Crocodile,II,23/06/2010,Transferred from Appendix I to Appendix II,ADDITION,II
-Animal,Crocodylus moreletii,"Dumeril, Bibron & Dumeril, 1851",Species,5663,Belize Crocodile,I,23/06/2010,Change to annotation (Populations transferred),ANNOTATION,I
+Animal,Crocodylus moreletii,"Dumeril, Bibron & Dumeril, 1851",Species,5663,Belize Crocodile,I,23/06/2010,Transferred from Appendix I to Appendix II,ADDITION,II
 Animal,Crocodylus niloticus,"Laurenti, 1768",Species,5664,African Crocodile,II,23/06/2010,Change to annotation (Populations transferred),ANNOTATION,II
 Animal,Crocodylus niloticus,"Laurenti, 1768",Species,5664,African Crocodile,I,23/06/2010,Change to annotation (Populations transferred),ANNOTATION,I
 Animal,Anas oustaleti,"Salvadori, 1894",Species,1230,Mariana Islands Duck,I,23/06/2010,Deleted from Appendix I,DELETION,I
