@@ -1,0 +1,44 @@
+Animal/Plan,Scientific Name,Author,Rank,ID,English Common Name,listing,effective_from,party_iso2,Change Type,Type of Change,Relevant Listing
+Animal,Canis lupus,"Linnaeus, 1758",Species,3746,Grey Wolf,II,23/06/2010,,Change to annotation,ANNOTATION,II
+Animal,Canis lupus,"Linnaeus, 1758",Species,3746,Grey Wolf,I,23/06/2010,,Change to annotation,ANNOTATION,I
+Animal,Crocodylus moreletii,"Dumeril, Bibron & Dumeril, 1851",Species,5663,Belize Crocodile,II,23/06/2010,,Transferred from Appendix I to Appendix II,TRANSFER,II
+Animal,Crocodylus moreletii,"Dumeril, Bibron & Dumeril, 1851",Species,5663,Belize Crocodile,I,23/06/2010,,Change to annotation (Populations transferred),ANNOTATION,I
+Animal,Crocodylus niloticus,"Laurenti, 1768",Species,5664,African Crocodile,II,23/06/2010,,Change to annotation (Populations transferred),ANNOTATION,II
+Animal,Crocodylus niloticus,"Laurenti, 1768",Species,5664,African Crocodile,I,23/06/2010,,Change to annotation (Populations transferred),ANNOTATION,I
+Animal,Anas oustaleti,"Salvadori, 1894",Species,1230,Mariana Islands Duck,DELI,23/06/2010,,Deleted from Appendix I,DELETION,I
+Animal,Neurergus kaiseri,"Schmidt, 1952",Species,14736,Kaiser's spotted newt,I,23/06/2010,,Included in Appendix I,NEW,I
+Animal,Ctenosaura bakeri,"Stejneger, 1901",Species,24579,Baker's Spiny-tailed Iguana,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Ctenosaura melanosterna,"Buckley & Axtell, 1997",Species,24582,Honduran Paleate Spiny-tailed Iguana,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Ctenosaura palearis,"Stejneger, 1899",Species,33480,Guatemalan Black Iguana,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Ctenosaura oedirhina,"De Queiroz, 1987",Species,35361,De Queiroz's Spiny-tailed Iguana,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Haliotis midae,"Linnaeus, 1758",Species,103329,Midas Ear Abalone,DELIII,24/06/2010,ZA,Deleted from Appendix III,DELETION,III
+Animal,Dynastes satanas,"Moser, 1909",Species,105217,Satanas beetle,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Calyptocephalella gayi,"(Dumeril & Bibron, 1841)",Species,105301,Chilean toad,III,27/04/2011,CL,Included in Appendix III,NEW,III
+Animal,Agrias amydon boliviensis,,Subspecies,105251,,III,14/10/2010,BO,Included in Appendix III,NEW,III
+Animal,Morpho godartii lachaumei,,Subspecies,105253,,III,14/10/2010,BO,Included in Appendix III,NEW,III
+Animal,Prepona praeneste buckleyana,,Subspecies,105255,,III,14/10/2010,BO,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,DK,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,BE,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,CY,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,DE,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,EE,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,ES,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,FI,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,FR,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,GB,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,GR,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,IE,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,IT,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,LT,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,LV,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,MT,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,NL,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,PL,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,PT,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,SE,Included in Appendix III,NEW,III
+Animal,Lamna nasus,"(Bonnaterre, 1788)",Species,11200,Porbeagle shark,III,25/09/2012,SI,Included in Appendix III,NEW,III
+Animal,Agalychnis spurrelli,"Boulenger, 1914",Species,39625,Gliding Leaf Frog,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Agalychnis saltator,"Taylor, 1955",Species,39624,Misfit Leaf Frog,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Agalychnis moreletii,"(Dumeril, 1853)",Species,39623,Black-eyed leaf frog,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Agalychnis callidryas,"(Cope, 1862)",Species,39620,Red-eyed Leaf Frog,II,23/06/2010,,Included in Appendix II,NEW,II
+Animal,Agalychnis annae,"(Duellman, 1963)",Species,23518,Blue-sided Leaf Frog,II,23/06/2010,,Included in Appendix II,NEW,II
