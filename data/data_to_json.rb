@@ -28,14 +28,14 @@ changes = []
         :author_year => row[2],
         :current_listing => row[6],
       }
+      changes << {
+        :id => change_id,
+        :taxon_concept_id => row[4],
+        :change_type => row[9],
+        :species_listing_name => row[10]
+      }
+      change_id += 1
     end
-    changes << {
-      :id => change_id,
-      :taxon_concept_id => row[4],
-      :change_type => row[9],
-      :species_listing_name => row[10]
-    }
-    change_id += 1
   end
   puts "Finished file #{file}"
 end
