@@ -36,7 +36,7 @@ window.JST['changes_index'] = _.template("""
         <span class="pull-right"><%= speciesCount %></span>
       </div>
       <div class="right">
-        Total changes
+        Total Number of Listing Changes
         <span class="pull-right"><%= changeModels.length %></span>
       </div>
     </div>
