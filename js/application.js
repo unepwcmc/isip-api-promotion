@@ -88,10 +88,6 @@
 
     SpeciesCollection.prototype.url = "data/species.json";
 
-    SpeciesCollection.prototype.parse = function(data) {
-      return data[0].animalia.concat(data[0].animalia);
-    };
-
     return SpeciesCollection;
 
   })(Backbone.Collection);
