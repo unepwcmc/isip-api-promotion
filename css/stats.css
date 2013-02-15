@@ -1,4 +1,31 @@
 /*
+  ===============================
+  Animation browser prefix mixins
+  ===============================
+*/
+/*
+  Example usage:
+
+  @include keyframe(changecolour) {
+    0% {
+      color: #000;
+    }
+
+    100% {
+      color: #FFF;
+    }
+  }
+ */
+/*
+  Example usage:
+  @include animation(10s, 5s, changecolour)
+ */
+/*
+  =======================
+  Device detection mixins
+  =======================
+*/
+/*
   https://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
 */
 /*
@@ -144,7 +171,12 @@
   .row.changes .changes-table {
     height: 285px;
     background: #fff;
-    overflow: scroll; }
+    overflow: scroll;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
     .row.changes .changes-table table {
       border-spacing: 0; }
       .row.changes .changes-table table tr:last-child td {
@@ -165,6 +197,7 @@
           float: left;
           padding-top: 1em; }
         .row.changes .changes-table table tr td .appendix-change {
+          position: relative;
           width: 155px;
           background-image: url(../img/arrow.png);
           background-repeat: no-repeat;
@@ -205,8 +238,18 @@
                    * that's scaled by 2 */
                   background-image: url("../img/icon-iii@2x.png");
                   background-size: 26px 26px; } }
+            .row.changes .changes-table table tr td .appendix-change div.icon.deletion {
+              background-image: url(../img/icon-del.png); }
+              @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+                .row.changes .changes-table table tr td .appendix-change div.icon.deletion {
+                  /* on retina, use image
+                   * that's scaled by 2 */
+                  background-image: url("../img/icon-del@2x.png");
+                  background-size: 26px 26px; } }
           .row.changes .changes-table table tr td .appendix-change div:last-child {
             margin-left: 128px;
+            position: absolute;
+            top: 16px;
             background-position: 0px; }
         .row.changes .changes-table table tr td .new-species {
           height: 28px;
@@ -220,6 +263,30 @@
                * that's scaled by 2 */
               background-image: url("../img/icon-plus@2x.png");
               background-size: 26px 26px; } }
+          .row.changes .changes-table table tr td .new-species div {
+            padding-top: 0; }
+        .row.changes .changes-table table tr td .new-annotation {
+          height: 28px;
+          background-image: url(../img/icon-plus.png);
+          padding-left: 35px;
+          background-repeat: no-repeat;
+          background-position: 0 15px; }
+          @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+            .row.changes .changes-table table tr td .new-annotation {
+              /* on retina, use image
+               * that's scaled by 2 */
+              background-image: url("../img/icon-plus@2x.png");
+              background-size: 26px 26px; } }
+          .row.changes .changes-table table tr td .new-annotation.done {
+            background-image: url(../img/icon-tick.png); }
+            @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+              .row.changes .changes-table table tr td .new-annotation.done {
+                /* on retina, use image
+                 * that's scaled by 2 */
+                background-image: url("../img/icon-tick@2x.png");
+                background-size: 26px 26px; } }
+          .row.changes .changes-table table tr td .new-annotation div {
+            padding-top: 0; }
         .row.changes .changes-table table tr td .control {
           float: right;
           border-left: 1px solid #e5e5e5;
@@ -269,3 +336,207 @@ h4 {
   text-transform: uppercase;
   font-size: 0.8em;
   margin-bottom: 0; }
+
+/*
+  Stat application animations
+*/
+.appendix-change.move {
+  -webkit-animation-delay: 0.1s;
+  -webkit-animation-duration: 0.9s;
+  -webkit-animation-name: mergeListingChangeArrow;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.1s;
+  -moz-animation-duration: 0.9s;
+  -moz-animation-name: mergeListingChangeArrow;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.1s;
+  -o-animation-duration: 0.9s;
+  -o-animation-name: mergeListingChangeArrow;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.1s;
+  animation-duration: 0.9s;
+  animation-name: mergeListingChangeArrow;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+  .appendix-change.move .icon:last-child {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1.45s;
+    -webkit-animation-name: mergeListingChangeIcon;
+    -webkit-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 1.45s;
+    -moz-animation-name: mergeListingChangeIcon;
+    -moz-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -o-animation-delay: 0s;
+    -o-animation-duration: 1.45s;
+    -o-animation-name: mergeListingChangeIcon;
+    -o-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    animation-delay: 0s;
+    animation-duration: 1.45s;
+    animation-name: mergeListingChangeIcon;
+    animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes mergeListingChangeIcon {
+  from {
+    left: 0px; }
+
+  to {
+    left: -128px; } }
+
+@-moz-keyframes mergeListingChangeIcon {
+  from {
+    left: 0px; }
+
+  to {
+    left: -128px; } }
+
+@-o-keyframes mergeListingChangeIcon {
+  from {
+    left: 0px; }
+
+  to {
+    left: -128px; } }
+
+@keyframes mergeListingChangeIcon {
+  from {
+    left: 0px; }
+
+  to {
+    left: -128px; } }
+
+@-webkit-keyframes mergeListingChangeArrow {
+  from {
+    background-position: 41px 24px; }
+
+  to {
+    background-position: -47px 24px; } }
+
+@-moz-keyframes mergeListingChangeArrow {
+  from {
+    background-position: 41px 24px; }
+
+  to {
+    background-position: -47px 24px; } }
+
+@-o-keyframes mergeListingChangeArrow {
+  from {
+    background-position: 41px 24px; }
+
+  to {
+    background-position: -47px 24px; } }
+
+@keyframes mergeListingChangeArrow {
+  from {
+    background-position: 41px 24px; }
+
+  to {
+    background-position: -47px 24px; } }
+
+.new-species.move div {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: fadeOut;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.5s;
+  -o-animation-name: fadeOut;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.fade-in {
+  opacity: 0;
+  padding: 0 !important;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: fadeIn;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-name: fadeIn;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }

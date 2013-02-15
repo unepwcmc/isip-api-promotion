@@ -10,7 +10,6 @@ class Backbone.Views.ChangeRowView extends Backbone.View
 
   initialize: (options) ->
     @model = options.model
-    @listenTo(@model, 'change', @render)
     @render()
 
   render: =>
@@ -23,9 +22,11 @@ class Backbone.Views.ChangeRowView extends Backbone.View
       speciesName = 'Unknown species'
       speciesListing = 'Unlisted'
       speciesAuthor = ""
-    @$el.html(@template(change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
+    @$el.html(@template(cid: @cid, change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
 
   toggleChange: (e) ->
+    console.log @model.get('change_type')
     @model.toggleChange()
+    @render()
 
   onClose: ->

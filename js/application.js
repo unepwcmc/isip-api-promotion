@@ -88,10 +88,6 @@
 
     SpeciesCollection.prototype.url = "data/species.json";
 
-    SpeciesCollection.prototype.parse = function(data) {
-      return data[0].animalia.concat(data[0].animalia);
-    };
-
     return SpeciesCollection;
 
   })(Backbone.Collection);
@@ -288,11 +284,19 @@
     };
 
     ChangesIndexView.prototype.initialize = function(options) {
+      var _this = this;
       this.changeList = options.changeList;
       this.listenTo(this.changeList, 'sync', this.render);
+      this.listenTo(this.changeList, 'change', function() {
+        _this.render();
+        return _this.stopListening(_this.changeList);
+      });
       this.speciesList = options.speciesList;
       this.listenTo(this.speciesList, 'sync', this.render);
-      this.listenTo(this.speciesList, 'change', this.render);
+      this.listenTo(this.speciesList, 'change', function() {
+        _this.render();
+        return _this.stopListening(_this.speciesList, 'change');
+      });
       return this.render();
     };
 
@@ -329,7 +333,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("<% if (change.get('change_type_name') === 'NEW_SPECIES') { %>\n<td class=\"empty\">\n  New species to be added\n</td>\n<td>\n  <div class=\"new-species\">\n    <%= speciesName %>\n    <span class=\"author\"><%= speciesAuthor %></span>\n  </div>\n<% } else { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change\">\n    <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <div class=\"icon <%= change.get('species_listing_name')%>\"></div>\n  </div>\n<% } %>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+  window.JST['changes_row'] = _.template("\n<% if (change.get('change_type') === 'NEW') { %>\n  <% if (change.get('applied')) { %>\n    <td>\n      <div class=\"fade-in\">\n        <%= speciesName %>\n        <span class=\"author\"><%= speciesAuthor %></span>\n      </div>\n  <% } else { %>\n    <td class=\"empty\">\n      New species to be added\n  <% } %>\n    </td>\n<td>\n  <div class=\"new-species <% if (change.get('applied')){ %>move<% } %>\">\n    <div>\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n  </div>\n<% } else if (change.get('change_type') === 'ANNOTATION') { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"new-annotation <% if (change.get('applied')) { %>done<% } %>\">\n    <div>\n      New or updated annotations\n    </div>\n  </div>\n<% } else { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <%\n      var newListing = change.get('species_listing_name');\n      if (change.get('change_type') === 'DELETION') {\n        newListing = \"deletion\";\n      }\n    %>\n    <div class=\"icon <%= newListing %>\"></div>\n  </div>\n<% } %>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -354,7 +358,6 @@
 
     ChangeRowView.prototype.initialize = function(options) {
       this.model = options.model;
-      this.listenTo(this.model, 'change', this.render);
       return this.render();
     };
 
@@ -375,6 +378,7 @@
         speciesAuthor = "";
       }
       return this.$el.html(this.template({
+        cid: this.cid,
         change: this.model,
         speciesName: speciesName,
         speciesListing: speciesListing,
@@ -383,7 +387,9 @@
     };
 
     ChangeRowView.prototype.toggleChange = function(e) {
-      return this.model.toggleChange();
+      console.log(this.model.get('change_type'));
+      this.model.toggleChange();
+      return this.render();
     };
 
     ChangeRowView.prototype.onClose = function() {};
