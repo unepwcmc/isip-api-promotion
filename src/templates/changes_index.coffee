@@ -6,7 +6,7 @@ window.JST['changes_index'] = _.template("""
       <h2>Species</h2>
     </div>
     <div class="right">
-      <h2>COP 15 Changes</h2>
+      <h2>CoP 15 Changes</h2>
       <% if (changeList.outstandingChanges().length > 0) { %>
         <a id="apply-all" class="btn">Apply All</a>
       <% } else { %>
