@@ -10,7 +10,6 @@ class Backbone.Views.ChangeRowView extends Backbone.View
   initialize: (options) ->
     @model = options.model
     @template = JST["changes_row_#{@model.get('change_type').toLowerCase()}"]
-    debugger
     @render()
 
   render: =>
