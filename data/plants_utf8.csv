@@ -1,18 +1,28 @@
 Animal/Plant,Scientific Name,Author,RANK_NAME,REC_ID,Common Name,LISTING,EFFECTIVE_FROM,Change Type,Type of Change,Relevant Listing
 Plant,Adenia olaboensis,Claverie,SPECIES,32589,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Aniba rosaeodora,Ducke,SPECIES,77553,Brazilian rosewood,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Euphorbia misera,Benth.,SPECIES,85319,Cliff Spurge,II,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Bulnesia sarmientoi,Lorentz & Griseb.,SPECIES,44025,Holy wood,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Cedrela fissilis,Vellozo,SPECIES,75867,,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Orothamnus zeyheri,Pappe ex Hook.f.,SPECIES,5823,Marsh Rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Cedrela lilloi,C. de Candolle,SPECIES,61851,,III,14/10/2010,Included in Appendix III,NEW,III
 Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,27/04/2011,Included in Appendix III,NEW,III
 Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Abdominea minimiflora,(Hook.f.) J.J. Smith,Species,50398,,II,23/06/2010,Change in Annotation,ANNOTATION,II
+Plant,Acampe congesta,,Species,184677,,II,23/06/2010,Change in Annotation,ANNOTATION,II
+Plant,Acampe multiflora,(Lindl.) Lindl,Species,105654,,II,23/06/2010,Change in Annotation,ANNOTATION,II
+Plant,Acampe papillosa,,Species,184748,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cyphostemma elephantopus,Descoings 1962,SPECIES,9374,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Cyphostemma montagnacii,Descoings,SPECIES,9377,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Dalbergia darienensis,Rudd,SPECIES,54932,,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Dalbergia louvelii,R.Vig.,SPECIES,171388,,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Dalbergia monticola,Bosser & Rabevohitra,SPECIES,172202,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Protea odorata,Thunb.,SPECIES,5894,Ground-rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Dalbergia normandii,Bosser & Rabevohitra,SPECIES,171320,,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Dalbergia purpurascens,0,SPECIES,172353,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Aa nervosa,(Kranzlin) Schltr.,Species,44178,,II,23/06/2010,Change in Annotation,ANNOTATION,II
+Plant,Acampe praemorsa,(Roxb.) Blatter & Mccann,Species,34410,,II,23/06/2010,Change in Annotation,ANNOTATION,II
+Plant,Acampe rigida,Buch-Harn. ex J.E.Sm. P.F.Hunt,Species,69686,Banana Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Dalbergia retusa,Hemsl.,SPECIES,61651,,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Dalbergia xerophila,0,SPECIES,167996,Palisandre,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Diospyros aculeata,H.Perrier,SPECIES,192592,,III,22/12/2011,Included in Appendix III,NEW,III
@@ -130,16 +140,6 @@ Plant,Pinus koraiensis,Sieber & Zucc.,SPECIES,32813,Korean Nut Pine,III,14/10/20
 Plant,Podocarpus neriifolius,D.Don in Lambert,SPECIES,6212,Black Pine,III,23/06/2010,Included in Appendix III,NEW,III
 Plant,Zygosicyos pubescens,Beentje. 1995,SPECIES,192417,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Zygosicyos tripartitus,Humbert 1944,SPECIES,7994,,II,23/06/2010,Included in Appendix II,NEW,II
-Plant,Euphorbia misera,Benth.,SPECIES,85319,Cliff Spurge,II,23/06/2010,Deleted from Appendix II,DELETION,II
-Plant,Orothamnus zeyheri,Pappe ex Hook.f.,SPECIES,5823,Marsh Rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
-Plant,Protea odorata,Thunb.,SPECIES,5894,Ground-rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
-Plant,Aa nervosa,(Kranzlin) Schltr.,Species,44178,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Abdominea minimiflora,(Hook.f.) J.J. Smith,Species,50398,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Acampe congesta,,Species,184677,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Acampe multiflora,(Lindl.) Lindl,Species,105654,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Acampe papillosa,,Species,184748,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Acampe praemorsa,(Roxb.) Blatter & Mccann,Species,34410,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Acampe rigida,Buch-Harn. ex J.E.Sm. P.F.Hunt,Species,69686,Banana Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Acampe wightiana,,Species,184683,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Acanthephippium bicolor,Lindley,Species,46173,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Acanthephippium curtisii,Reichb.f.,Species,76406,,II,23/06/2010,Change in Annotation,ANNOTATION,II

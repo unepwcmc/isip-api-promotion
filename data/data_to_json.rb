@@ -19,7 +19,7 @@ changes = []
   # 10: change_type
   # 11: relevant_listing
   ids = []
-  table[1, 60].each do |row|
+  table[1, 80].each do |row|
     unless ids.include? row[4]
       ids << row[4]
       species << {
