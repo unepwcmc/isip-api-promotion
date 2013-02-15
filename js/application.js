@@ -333,7 +333,19 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row'] = _.template("\n<% if (change.get('change_type') === 'NEW') { %>\n  <% if (change.get('applied')) { %>\n    <td>\n      <div class=\"fade-in\">\n        <%= speciesName %>\n        <span class=\"author\"><%= speciesAuthor %></span>\n      </div>\n  <% } else { %>\n    <td class=\"empty\">\n      New species to be added\n  <% } %>\n    </td>\n<td>\n  <div class=\"new-species <% if (change.get('applied')){ %>move<% } %>\">\n    <div>\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n  </div>\n<% } else if (change.get('change_type') === 'ANNOTATION') { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"new-annotation <% if (change.get('applied')) { %>done<% } %>\">\n    <div>\n      New or updated annotations\n    </div>\n  </div>\n<% } else { %>\n<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <%\n      var newListing = change.get('species_listing_name');\n      if (change.get('change_type') === 'DELETION') {\n        newListing = \"deletion\";\n      }\n    %>\n    <div class=\"icon <%= newListing %>\"></div>\n  </div>\n<% } %>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+  window.JST['changes_row_addition'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <div class=\"icon <%= change.get('species_listing_name') %>\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+
+  window.JST || (window.JST = {});
+
+  window.JST['changes_row_annotation'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"new-annotation <% if (change.get('applied')) { %>done<% } %>\">\n    <div>\n      New or updated annotations\n    </div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+
+  window.JST || (window.JST = {});
+
+  window.JST['changes_row_deletion'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <div class=\"icon deletion\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+
+  window.JST || (window.JST = {});
+
+  window.JST['changes_row_new'] = _.template("<% if (change.get('applied')) { %>\n  <td>\n    <div class=\"fade-in\">\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n<% } else { %>\n  <td class=\"empty\">\n    New species to be added\n<% } %>\n  </td>\n<td>\n  <div class=\"new-species <% if (change.get('applied')){ %>move<% } %>\">\n    <div>\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 
@@ -350,14 +362,14 @@
 
     ChangeRowView.prototype.tagName = 'tr';
 
-    ChangeRowView.prototype.template = JST['changes_row'];
-
     ChangeRowView.prototype.events = {
       "click .btn": "toggleChange"
     };
 
     ChangeRowView.prototype.initialize = function(options) {
       this.model = options.model;
+      this.template = JST["changes_row_" + (this.model.get('change_type').toLowerCase())];
+      debugger;
       return this.render();
     };
 
