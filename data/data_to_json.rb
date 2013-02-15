@@ -19,7 +19,7 @@ changes = []
   # 10: change_type
   # 11: relevant_listing
   ids = []
-  table[1, table.size-1].each do |row|
+  table[1, 30].each do |row|
     unless ids.include? row[4]
       ids << row[4]
       species << {
@@ -27,15 +27,13 @@ changes = []
         :full_name => row[1],
         :author_year => row[2],
         :current_listing => row[6],
-        :change_type => row[10],
-        :relevant_listing => row[11]
       }
     end
     changes << {
       :id => change_id,
       :species_id => row[4],
-      :change_type => row[10],
-      :species_listing => row[11]
+      :change_type => row[9],
+      :species_listing => row[10]
     }
     change_id += 1
   end
