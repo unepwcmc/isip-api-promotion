@@ -1,7 +1,8 @@
 window.JST ||= {}
 
 window.JST['changes_row'] = _.template("""
-  <% if (change.get('change_type_name') === 'NEW_SPECIES') { %>
+
+  <% if (change.get('change_type') === 'NEW') { %>
     <% if (change.get('applied')) { %>
       <td>
         <div class="fade-in">
