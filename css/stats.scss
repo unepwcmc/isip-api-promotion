@@ -176,6 +176,11 @@
       height: 285px;
       background: #fff;
       overflow: scroll;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
 
       table {
         border-spacing: 0;
@@ -208,6 +213,7 @@
             }
 
             .appendix-change {
+              position: relative;
               width: 155px;
               background-image: url(../img/arrow.png);
               background-repeat: no-repeat;
@@ -240,6 +246,8 @@
 
                 &:last-child {
                   margin-left: 128px;
+                  position: absolute;
+                  top: 16px;
                   background-position: 0px;
                 }
               }
@@ -252,6 +260,10 @@
               background-repeat: no-repeat;
               background-position: 0 15px;
               @include image-2x("../img/icon-plus@2x.png", 26px, 26px);
+
+              div {
+                padding-top: 0;
+              }
             }
 
             .control {
@@ -330,4 +342,48 @@ h4 {
   text-transform: uppercase;
   font-size: 0.8em;
   margin-bottom: 0;
+}
+
+/*
+  Stat application animations
+*/
+
+.appendix-change.move {
+  @include animation(0.1s, 0.9s, mergeListingChangeArrow);
+
+  .icon:last-child {
+    @include animation(0s, 1.45s, mergeListingChangeIcon);
+  }
+}
+
+@include keyframe(mergeListingChangeIcon) {
+  from { left: 0px; }
+  to { left: -128px; }
+}
+
+@include keyframe(mergeListingChangeArrow) {
+  from { background-position: 41px 24px; }
+  to { background-position: -47px 24px; }
+}
+
+.new-species.move {
+  div {
+    @include animation(0s, 0.5s, fadeOut);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  padding: 0 !important;
+  @include animation(0s, 1s, fadeIn);
+}
+
+@include keyframe(fadeOut) {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@include keyframe(fadeIn) {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

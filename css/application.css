@@ -1,4 +1,31 @@
 /*
+  ===============================
+  Animation browser prefix mixins
+  ===============================
+*/
+/*
+  Example usage:
+
+  @include keyframe(changecolour) {
+    0% {
+      color: #000;
+    }
+
+    100% {
+      color: #FFF;
+    }
+  }
+ */
+/*
+  Example usage:
+  @include animation(10s, 5s, changecolour)
+ */
+/*
+  =======================
+  Device detection mixins
+  =======================
+*/
+/*
   https://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
 */
 /*

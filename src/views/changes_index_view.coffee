@@ -11,9 +11,25 @@ class Backbone.Views.ChangesIndexView extends Backbone.Diorama.NestingView
   initialize: (options) ->
     @changeList = options.changeList
     @listenTo(@changeList, 'sync', @render)
+
+    # Horrible hacks (kind of)
+    # Because of the CSS animations for listing changes, re-rendering
+    # the entire list when a change is applied will result in all the
+    # animations re-running. Instead, we stop listening to model changes
+    # after the first render to ensure that the list is rendered when
+    # the json is loaded but not when any of the changes are applied.
+    #
+    # Suggestions for better solutions are welcome
+    @listenTo(@changeList, 'change', =>
+      @render()
+      @stopListening(@changeList)
+    )
     @speciesList = options.speciesList
     @listenTo(@speciesList, 'sync', @render)
-    @listenTo(@speciesList, 'change', @render)
+    @listenTo(@speciesList, 'change', =>
+      @render()
+      @stopListening(@speciesList, 'change')
+    )
     @render()
 
   render: =>
