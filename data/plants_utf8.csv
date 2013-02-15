@@ -1,4 +1,138 @@
 Animal/Plant,Scientific Name,Author,RANK_NAME,REC_ID,Common Name,LISTING,EFFECTIVE_FROM,Change Type,Type of Change,Relevant Listing
+Plant,Adenia olaboensis,Claverie,SPECIES,32589,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Aniba rosaeodora,Ducke,SPECIES,77553,Brazilian rosewood,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Bulnesia sarmientoi,Lorentz & Griseb.,SPECIES,44025,Holy wood,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Cedrela fissilis,Vellozo,SPECIES,75867,,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Cedrela lilloi,C. de Candolle,SPECIES,61851,,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,27/04/2011,Included in Appendix III,NEW,III
+Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Cyphostemma elephantopus,Descoings 1962,SPECIES,9374,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Cyphostemma montagnacii,Descoings,SPECIES,9377,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Dalbergia darienensis,Rudd,SPECIES,54932,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia louvelii,R.Vig.,SPECIES,171388,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia monticola,Bosser & Rabevohitra,SPECIES,172202,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia normandii,Bosser & Rabevohitra,SPECIES,171320,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia purpurascens,0,SPECIES,172353,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia retusa,Hemsl.,SPECIES,61651,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Dalbergia xerophila,0,SPECIES,167996,Palisandre,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros aculeata,H.Perrier,SPECIES,192592,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros aculeata aculeata,0,SUBSPECIES,160556,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros aculeata meridionalis,H.Perr.,SUBSPECIES,160557,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros anosivolensis,H.Perrier,SPECIES,192536,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros baroniana,H.Perr.,SPECIES,160587,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros bemarivensis,H.Perr.,SPECIES,160584,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros bernieri,Hiern,SPECIES,160611,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros bernieriana,(Baill.) H.Perrier,SPECIES,192537,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros bezofensis,H.Perr.,SPECIES,160578,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros boinensis,(H. Perrier),SPECIES,192538,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros boivini,Hiern,SPECIES,160573,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros calophylla,Hiern,SPECIES,160550,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros clusiifolia,(Hiern) G.E.Schatz & Lowry,SPECIES,192541,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros conifera,H.Perr.,SPECIES,160552,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros coursiana,H.Perr.,SPECIES,160591,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros cupulifera,H.Perr.,SPECIES,160599,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros danguyana,H.Perr.,SPECIES,160555,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros decaryana,H.Perr.,SPECIES,160547,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros dycorypheoides,H.Perrier,SPECIES,192542,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros dycorypheoides var. meridionalis,H.Perrier,VARIETY,192543,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros ebenifera,(Hiern) G.E.Schatz & Lowry,SPECIES,192544,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros enervis,(H.Perrier),SPECIES,192545,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros erinacea,(H.Perrier),SPECIES,192547,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros erythrosperma,H.Perr.,SPECIES,160562,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros filipes,H.Perrier,SPECIES,192548,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros fuscovelutina,Baker,SPECIES,160604,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros geayana,H.Perrier,SPECIES,192549,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros gneissicola,(H.Perrier),SPECIES,192550,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros gracilipes,Hiern,SPECIES,160588,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros greveana,(Pierre) H.Perr.,SPECIES,160564,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros greveana boinensis,H.Perr.,SUBSPECIES,160565,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros haplostylis,Boivin ex Hiern,SPECIES,160581,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros haplostylis var. hildebrandtii,Garcke,VARIETY,160582,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros hazomainty,H.Perr.,SPECIES,160606,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros hemiteles,I. Richardson,SPECIES,14535,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros heterosepala,H.Perrier,SPECIES,192552,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros humbertiana,H.Perr.,SPECIES,160559,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros humbertii,(H.Perrier),SPECIES,192554,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros implexicalyx,H.Perr.,SPECIES,160592,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros ketsensis,H.Perr.,SPECIES,160558,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros laevis,Bojer ex DC.,SPECIES,160579,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros lamiana,(H.Perrier),SPECIES,192555,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros lanceolata,Poir.,SPECIES,192556,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros latispathulata,H.Perrier,SPECIES,192557,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros lenticellata,Bak.,SPECIES,160551,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros leucomelas,Poiret,SPECIES,12222,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros lokohensis,(H.Perrier),SPECIES,192560,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros louveli,H.Perr.,SPECIES,160568,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros madagascariensis,(A.DC.),SPECIES,192561,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros madecassa,H.Perrier,SPECIES,192562,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros magnifolia,(H.Perrier),SPECIES,192563,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros manampetsae,H.Perrier,SPECIES,192564,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros mangabensis,Aug.DC.,SPECIES,192565,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros mangorensis,H.Perr.,SPECIES,160603,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros mapingo,H.Perr.,SPECIES,160595,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros masoalensis,H.Perr.,SPECIES,160569,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros mcphersonii,G.E. Schatz & Lowry,SPECIES,192566,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros meeusiana,(H.Perrier),SPECIES,192567,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros microrhombus,Hiern,SPECIES,192568,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros montigena,(H.Perrier),SPECIES,192569,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros myriophylla,(H.Perrier),SPECIES,192570,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros myrtifolia,H.Perr.,SPECIES,160548,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros myrtilloides,(H.Perrier),SPECIES,192573,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros natalensis,(Harv.) Brenan,SPECIES,63329,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros neraudii,DC.,SPECIES,14800,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros nigricans,Wall. ex A.DC.,SPECIES,192574,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros nodosa,Poiret,SPECIES,14801,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros obducta,(H.Perrier),SPECIES,192575,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros occlusa,H.Perrier,SPECIES,192576,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros olacinoides,(H.Perrier),SPECIES,192577,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros onivensis,H.Perr.,SPECIES,160549,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros parifolia,H.Perr.,SPECIES,160598,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros parvifolia,Hiern,SPECIES,192578,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros perreticulata,H.Perrier,SPECIES,192579,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros perrieri,Jumelle,SPECIES,160570,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros pervillei,Hiern,SPECIES,160572,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros platycalyx,Hiern,SPECIES,160602,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros pruinosa var. pruinosa,0,VARIETY,160608,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros quartzitarium,0,SPECIES,192580,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros quercina,(Baill.),SPECIES,192581,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros revaughanii,I. Richardson,SPECIES,14534,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros rubrolanata,H.Perrier,SPECIES,192582,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros sakalavarum,H.Perr.,SPECIES,160575,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros sclerophylla,H.Perrier,SPECIES,192591,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros seychellarum,(Hiern) Kosterm.,SPECIES,102040,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros sphaerosepala,Baker,SPECIES,192584,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros sphaerosepala var. calyculata,H.Perrier,VARIETY,192585,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros stenocarpa,(H.Perrier),SPECIES,192586,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros striicalyx,H.Perr.,SPECIES,160554,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros subacuta,Hiern,SPECIES,192587,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros subenervis,0,SPECIES,192588,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros subfalciformis,H.Perr.,SPECIES,160593,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros subsessilifolia,H.Perr.,SPECIES,160594,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros subtrinervis,H.Perr.,SPECIES,160571,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros tampinensis,H.Perr.,SPECIES,160567,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros tetraceros,H.Perr.,SPECIES,160607,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros tetrapoda,H.Perr.,SPECIES,160585,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros torquata,H.Perr.,SPECIES,160545,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros toxicaria,Hiern,SPECIES,192539,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros tropophylla,(H.Perrier),SPECIES,192590,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros urschii,H.Perr.,SPECIES,160605,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros velutipes,(H.Perrier) G.E.Schatz & Lowry,SPECIES,192571,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros vera,A.Chev.,SPECIES,192572,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros vescoi,Hiern,SPECIES,160600,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Diospyros viguieriana,H.Perr. ,SPECIES,160566,,III,22/12/2011,Included in Appendix III,NEW,III
+Plant,Gnetum montanum,Markgraf,SPECIES,62078,,III,23/06/2010,Included in Appendix III,NEW,III
+Plant,Lodoicea maldivica,(J. Gmelin) Pers.,SPECIES,8817,Double Coconut,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Magnolia liliifera var. obovata,(Korth.) Govaerts,VARIETY,9762,,III,23/06/2010,Included in Appendix III,NEW,III
+Plant,Meconopsis regia,G. Taylor,SPECIES,46554,Himalayan Poppy,III,23/06/2010,Included in Appendix III,NEW,III
+Plant,Operculicarya hyphaenoides,H. Perrier 1944,SPECIES,192415,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Operculicarya pachypus,H. Perrier 1944,SPECIES,192416,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Pinus koraiensis,Sieber & Zucc.,SPECIES,32813,Korean Nut Pine,III,14/10/2010,Included in Appendix III,NEW,III
+Plant,Podocarpus neriifolius,D.Don in Lambert,SPECIES,6212,Black Pine,III,23/06/2010,Included in Appendix III,NEW,III
+Plant,Zygosicyos pubescens,Beentje. 1995,SPECIES,192417,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Zygosicyos tripartitus,Humbert 1944,SPECIES,7994,,II,23/06/2010,Included in Appendix II,NEW,II
+Plant,Euphorbia misera,Benth.,SPECIES,85319,Cliff Spurge,II,23/06/2010,Deleted from Appendix II,DELETION,II
+Plant,Orothamnus zeyheri,Pappe ex Hook.f.,SPECIES,5823,Marsh Rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
+Plant,Protea odorata,Thunb.,SPECIES,5894,Ground-rose,II,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Aa nervosa,(Kranzlin) Schltr.,Species,44178,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Abdominea minimiflora,(Hook.f.) J.J. Smith,Species,50398,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Acampe congesta,,Species,184677,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -84,7 +218,6 @@ Plant,Ada elegantula,(Rchb.f.) N.H.Williams 1972,Species,82725,,II,23/06/2010,Ch
 Plant,Ada glumacea,(Lindl.) N.H.Williams 1972,Species,82726,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ada keiliana,(Rchb.f. ex Lindl.) N.H.Williams 1972,Species,176723,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ada ocanensis,(Lindl.) N.H.Williams 1972,Species,176729,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Adenia olaboensis,Claverie,SPECIES,32589,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Adenochilus nortonii,W. Fitzg.,Species,12871,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Adenoncos major,Ridley,Species,40127,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Adenoncos sumatrana,J.J. Sm,Species,109899,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -951,7 +1084,6 @@ Plant,Anguloa uniflora,Ruiz & Pav. 1798,Species,172895,,II,23/06/2010,Change in 
 Plant,Anguloa virginalis,Lindl. ex B.S.Williams 1872,Species,172912,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ania penangiana,(Hook. f.) Summerhayes,Species,75627,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ania viridfusca,,Species,186174,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Aniba rosaeodora,Ducke,SPECIES,77553,Brazilian rosewood,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Anneliesia candida,,Species,184949,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Anneliesia cuneata,,Species,184948,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Anneliesia kayasimae,,Species,184952,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -3237,7 +3369,6 @@ Plant,Bulbophyllum zamboangense,Ames,Species,190402,,II,23/06/2010,Change in Ann
 Plant,Bulbophyllum zaratananae,Schltr.,Species,190403,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Bulbophyllum zebrinum,J.J.Sm.,Species,190405,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Bulleyia yunnanensis,Schltr.,Species,31352,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Bulnesia sarmientoi,Lorentz & Griseb.,SPECIES,44025,Holy wood,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Burnettia cuneata,Lindley,Species,14698,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cadetia collinsii,Lavarack,Species,13121,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cadetia quadrangularis,Cribb & B. Lewis,Species,69344,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -3767,10 +3898,6 @@ Plant,Caularthron amazonicum,(Schltr.) H.G.Jones 1968,Species,177401,,II,23/06/2
 Plant,Caularthron bicornutum,(Hook.) Raf. 1836,Species,174930,Virgin Mary Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Caularthron bilamellatum,(Rchb.f.) R.E.Schult. 1958,Species,82762,Little Virgin Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Caularthron kraenzlinianum,H.G.Jones 1981,Species,177404,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Cedrela fissilis,Vellozo,SPECIES,75867,,III,14/10/2010,Included in Appendix III,NEW,III
-Plant,Cedrela lilloi,C. de Candolle,SPECIES,61851,,III,14/10/2010,Included in Appendix III,NEW,III
-Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,27/04/2011,Included in Appendix III,NEW,III
-Plant,Cedrela odorata,L.,SPECIES,49569,West Indian Cedar,III,14/10/2010,Included in Appendix III,NEW,III
 Plant,Centroglossa castellensis,Brade,Species,192526,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Centroglossa geeniana,,Species,177531,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Centrostigma clavatum,Summerh.,Species,59374,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -4983,8 +5110,6 @@ Plant,Cymbidium zaleskianum,L. Linden,Species,11983,,II,23/06/2010,Change in Ann
 Plant,Cynorkis anisoloba,Summerh.,Species,47060,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cynorkis compacta,(Rchb.f.) Rolfe,Species,5296,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cynorkis squamosa,Lindl.,Species,161387,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Cyphostemma elephantopus,Descoings 1962,SPECIES,9374,,II,23/06/2010,Included in Appendix II,NEW,II
-Plant,Cyphostemma montagnacii,Descoings,SPECIES,9377,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Cypripedium acaule,Aiton,Species,178260,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cypripedium andrewsii,Fuller,Species,178270,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Cypripedium arietinum,R.Br.,Species,84220,Ram's-head Lady's-slipper Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -5072,13 +5197,6 @@ Plant,Dactylorhiza saccifera,(Brongn.) Soo,Species,122118,,II,23/06/2010,Change 
 Plant,Dactylorhiza sambucina,(L.) Soo,Species,47335,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Dactylorhiza sulphurea,(Link) Franco,Species,123318,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Dactylorhiza traunsteineri,(Saut. ex Rchb.) Soo,Species,126408,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Dalbergia darienensis,Rudd,SPECIES,54932,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia louvelii,R.Vig.,SPECIES,171388,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia monticola,Bosser & Rabevohitra,SPECIES,172202,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia normandii,Bosser & Rabevohitra,SPECIES,171320,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia purpurascens,0,SPECIES,172353,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia retusa,Hemsl.,SPECIES,61651,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Dalbergia xerophila,0,SPECIES,167996,Palisandre,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Decarya madagascariensis,Choux,Species,9186,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Deceptor bidoupensis,(Tixier et Guillaum.) Seidenf,Species,167261,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Deiregyne hondurensis,(Schltr.) Schltr.,Species,19608,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -5990,111 +6108,6 @@ Plant,Dioon rzedowskii,"De Luca, A.Moretti, Sabato & Vasq.Torres",Species,10958,
 Plant,Dioon sonorense,"(De Luca, Sabato & Vasq.Torres) J.Chemnick, T.J.Gregory & S.Salas-Morales",Species,11358,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Dioon spinulosum,Dyer,Species,10959,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Dioscorea deltoidea,Wallich ex Kunth,SPECIES,31244,Dioscorea,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Diospyros aculeata,H.Perrier,SPECIES,192592,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros aculeata aculeata,0,SUBSPECIES,160556,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros aculeata meridionalis,H.Perr.,SUBSPECIES,160557,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros anosivolensis,H.Perrier,SPECIES,192536,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros baroniana,H.Perr.,SPECIES,160587,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros bemarivensis,H.Perr.,SPECIES,160584,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros bernieri,Hiern,SPECIES,160611,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros bernieriana,(Baill.) H.Perrier,SPECIES,192537,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros bezofensis,H.Perr.,SPECIES,160578,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros boinensis,(H. Perrier),SPECIES,192538,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros boivini,Hiern,SPECIES,160573,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros calophylla,Hiern,SPECIES,160550,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros clusiifolia,(Hiern) G.E.Schatz & Lowry,SPECIES,192541,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros conifera,H.Perr.,SPECIES,160552,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros coursiana,H.Perr.,SPECIES,160591,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros cupulifera,H.Perr.,SPECIES,160599,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros danguyana,H.Perr.,SPECIES,160555,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros decaryana,H.Perr.,SPECIES,160547,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros dycorypheoides,H.Perrier,SPECIES,192542,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros dycorypheoides var. meridionalis,H.Perrier,VARIETY,192543,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros ebenifera,(Hiern) G.E.Schatz & Lowry,SPECIES,192544,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros enervis,(H.Perrier),SPECIES,192545,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros erinacea,(H.Perrier),SPECIES,192547,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros erythrosperma,H.Perr.,SPECIES,160562,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros filipes,H.Perrier,SPECIES,192548,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros fuscovelutina,Baker,SPECIES,160604,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros geayana,H.Perrier,SPECIES,192549,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros gneissicola,(H.Perrier),SPECIES,192550,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros gracilipes,Hiern,SPECIES,160588,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros greveana,(Pierre) H.Perr.,SPECIES,160564,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros greveana boinensis,H.Perr.,SUBSPECIES,160565,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros haplostylis,Boivin ex Hiern,SPECIES,160581,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros haplostylis var. hildebrandtii,Garcke,VARIETY,160582,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros hazomainty,H.Perr.,SPECIES,160606,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros hemiteles,I. Richardson,SPECIES,14535,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros heterosepala,H.Perrier,SPECIES,192552,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros humbertiana,H.Perr.,SPECIES,160559,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros humbertii,(H.Perrier),SPECIES,192554,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros implexicalyx,H.Perr.,SPECIES,160592,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros ketsensis,H.Perr.,SPECIES,160558,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros laevis,Bojer ex DC.,SPECIES,160579,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros lamiana,(H.Perrier),SPECIES,192555,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros lanceolata,Poir.,SPECIES,192556,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros latispathulata,H.Perrier,SPECIES,192557,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros lenticellata,Bak.,SPECIES,160551,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros leucomelas,Poiret,SPECIES,12222,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros lokohensis,(H.Perrier),SPECIES,192560,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros louveli,H.Perr.,SPECIES,160568,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros madagascariensis,(A.DC.),SPECIES,192561,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros madecassa,H.Perrier,SPECIES,192562,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros magnifolia,(H.Perrier),SPECIES,192563,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros manampetsae,H.Perrier,SPECIES,192564,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros mangabensis,Aug.DC.,SPECIES,192565,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros mangorensis,H.Perr.,SPECIES,160603,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros mapingo,H.Perr.,SPECIES,160595,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros masoalensis,H.Perr.,SPECIES,160569,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros mcphersonii,G.E. Schatz & Lowry,SPECIES,192566,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros meeusiana,(H.Perrier),SPECIES,192567,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros microrhombus,Hiern,SPECIES,192568,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros montigena,(H.Perrier),SPECIES,192569,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros myriophylla,(H.Perrier),SPECIES,192570,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros myrtifolia,H.Perr.,SPECIES,160548,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros myrtilloides,(H.Perrier),SPECIES,192573,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros natalensis,(Harv.) Brenan,SPECIES,63329,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros neraudii,DC.,SPECIES,14800,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros nigricans,Wall. ex A.DC.,SPECIES,192574,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros nodosa,Poiret,SPECIES,14801,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros obducta,(H.Perrier),SPECIES,192575,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros occlusa,H.Perrier,SPECIES,192576,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros olacinoides,(H.Perrier),SPECIES,192577,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros onivensis,H.Perr.,SPECIES,160549,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros parifolia,H.Perr.,SPECIES,160598,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros parvifolia,Hiern,SPECIES,192578,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros perreticulata,H.Perrier,SPECIES,192579,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros perrieri,Jumelle,SPECIES,160570,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros pervillei,Hiern,SPECIES,160572,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros platycalyx,Hiern,SPECIES,160602,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros pruinosa var. pruinosa,0,VARIETY,160608,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros quartzitarium,0,SPECIES,192580,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros quercina,(Baill.),SPECIES,192581,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros revaughanii,I. Richardson,SPECIES,14534,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros rubrolanata,H.Perrier,SPECIES,192582,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros sakalavarum,H.Perr.,SPECIES,160575,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros sclerophylla,H.Perrier,SPECIES,192591,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros seychellarum,(Hiern) Kosterm.,SPECIES,102040,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros sphaerosepala,Baker,SPECIES,192584,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros sphaerosepala var. calyculata,H.Perrier,VARIETY,192585,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros stenocarpa,(H.Perrier),SPECIES,192586,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros striicalyx,H.Perr.,SPECIES,160554,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros subacuta,Hiern,SPECIES,192587,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros subenervis,0,SPECIES,192588,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros subfalciformis,H.Perr.,SPECIES,160593,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros subsessilifolia,H.Perr.,SPECIES,160594,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros subtrinervis,H.Perr.,SPECIES,160571,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros tampinensis,H.Perr.,SPECIES,160567,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros tetraceros,H.Perr.,SPECIES,160607,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros tetrapoda,H.Perr.,SPECIES,160585,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros torquata,H.Perr.,SPECIES,160545,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros toxicaria,Hiern,SPECIES,192539,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros tropophylla,(H.Perrier),SPECIES,192590,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros urschii,H.Perr.,SPECIES,160605,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros velutipes,(H.Perrier) G.E.Schatz & Lowry,SPECIES,192571,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros vera,A.Chev.,SPECIES,192572,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros vescoi,Hiern,SPECIES,160600,,III,22/12/2011,Included in Appendix III,NEW,III
-Plant,Diospyros viguieriana,H.Perr. ,SPECIES,160566,,III,22/12/2011,Included in Appendix III,NEW,III
 Plant,Diplandrorchis sinica,S.C. Chen,Species,50390,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Diplocaulobium copelandii,(F.M.Bailey) P.F.Hunt,Species,192230,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Diplocaulobium fililobum,(F. Muell.) Kranzlin,Species,43730,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -8020,7 +8033,6 @@ Plant,Euphorbia millotii,Ursch & Leandri,Species,9391,,II,23/06/2010,Change in A
 Plant,Euphorbia minuta,Loscos & J.Pardo,Species,1353,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Euphorbia mira,L.C. Leach,Species,106355,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Euphorbia misella,S.Watson,Species,20493,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Euphorbia misera,Benth.,SPECIES,85319,Cliff Spurge,DELII,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Euphorbia missurica,Raf.,Species,123756,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Euphorbia mitriformis,Bally & S. Carter,Species,27769,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Euphorbia mitsimbinensis,Ursch & Leandri,Species,21912,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -8596,7 +8608,6 @@ Plant,Geohintonia mexicana,Glass & Fitz Maurice,Species,108116,,II,23/06/2010,Ch
 Plant,Glomera carolinensis,L.O. Williams,Species,44236,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Glomera erythrosma,Blume,Species,49878,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Glomera reineckeana,Schltr.,Species,43806,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Gnetum montanum,Markgraf,SPECIES,62078,,III,23/06/2010,Included in Appendix III,NEW,III
 Plant,Gomesa gracilis,(Lindl.) M.W.Chase & N.H.Williams,Species,192495,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Gonatostylis bougainvillei,Halle,Species,30335,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Gonatostylis vieillardii,(Reichb.f.) Schltr.,Species,30334,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -9686,7 +9697,6 @@ Plant,Lockhartia serra,Rchb.f. 1878,Species,99851,,II,23/06/2010,Change in Annot
 Plant,Lockhartia triangulabia,Ames & Schweinf. 1925,Species,176856,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Lockhartia tuberculata,D.E.Benn. & Christenson,Species,176029,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Lockhartia variabilis,Ames & Schweinf. 1925,Species,176863,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Lodoicea maldivica,(J. Gmelin) Pers.,SPECIES,8817,Double Coconut,III,14/10/2010,Included in Appendix III,NEW,III
 Plant,Loefgrenianthus blanche-amesii,(Loefgr.) Hoehne 1927,Species,177472,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Lophophora diffusa,(Croizat) H.Bravo,Species,104946,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Lophophora williamsii,(Lemaire ex Salm-Dyck) J.Coulter,Species,84665,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -9816,7 +9826,6 @@ Plant,Macrozamia serpentina,,Species,185734,,II,23/06/2010,Change in Annotation,
 Plant,Macrozamia spiralis,(Salisb.) Miq.,Species,15060,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Macrozamia stenomera,L.A.S.Johnson,Species,12714,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Macrozamia viridis,D.L.Jones & P.I.Forst.,Species,155976,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Magnolia liliifera var. obovata,(Korth.) Govaerts,VARIETY,9762,,III,23/06/2010,Included in Appendix III,NEW,III
 Plant,Maihuenia patagonica,(Philippi) Spegazzini,Species,107083,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Maihuenia poeppigii,(Pfeiffer) Schumann,Species,107127,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Malaxis acianthoides,(Schltr.) Ames,Species,19341,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -10709,7 +10718,6 @@ Plant,Maxillaria tonduzii,(Schltr.) Ames & C. Schweinf.,Species,18024,,II,23/06/
 Plant,Maxillaria trilobata,Ames & C. Schweinf.,Species,18025,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Maxillaria uncata,Lindl.,Species,100198,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Maxillaria vaginalis,Reichb.f.,Species,18026,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Meconopsis regia,G. Taylor,SPECIES,46554,Himalayan Poppy,III,23/06/2010,Included in Appendix III,NEW,III
 Plant,Mediocalcar paradoxum,(Kranzlin) Schltr.,Species,43808,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Mediocalcar ponapense,Schltr.,Species,44237,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Megastylis glandulosa,(Schltr.) Schltr.,Species,30321,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -11290,8 +11298,6 @@ Plant,Oncidium urophyllum,Lodd. ex Lindl.,Species,52740,,II,23/06/2010,Change in
 Plant,Oncidium usneoides,Lindley,Species,41038,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Oncidium variegatum,(Sw.) Willd.,Species,87346,Dancing-lady Orchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Oncidium wydleri,Rchb. f.,Species,52741,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Operculicarya hyphaenoides,H. Perrier 1944,SPECIES,192415,,II,23/06/2010,Included in Appendix II,NEW,II
-Plant,Operculicarya pachypus,H. Perrier 1944,SPECIES,192416,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Ophrys aesculapii,Renz,Species,2219,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ophrys apifera,Huds.,Species,149372,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ophrys arachnitiformis,Gren. & Philippe,Species,122830,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -11746,7 +11752,6 @@ Plant,Ornithocephalus obergiae,Soto Arenas,Species,169947,,II,23/06/2010,Change 
 Plant,Ornithocephalus powellii,Schltr.,Species,16791,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ornithochilus delavayi,,Species,186185,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ornithochilus difformis,Schltr.,Species,187391,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Orothamnus zeyheri,Pappe ex Hook.f.,SPECIES,5823,Marsh Rose,DELII,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Oroya borchersii,(Boedeker) Backeberg,Species,107567,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Oroya peruviana,(Schumann) Britton & Rose,Species,107568,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Ortegocactus macdougallii,Alexander,Species,27616,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -12290,7 +12295,6 @@ Plant,Pilosocereus subsimilis,Rizzini & Mattos,Species,108277,,II,23/06/2010,Cha
 Plant,Pilosocereus tuberculatus,(Werdermann) Byles & Rowley,Species,107920,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Pilosocereus ulei,(Schumann) Byles & Rowley,Species,107923,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Pilosocereus vilaboensis,(Diers & Esteves Pereira) Braun,Species,107924,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Pinus koraiensis,Sieber & Zucc.,SPECIES,32813,Korean Nut Pine,III,14/10/2010,Included in Appendix III,NEW,III
 Plant,Piperia maritima,Rydb.,Species,74711,Dense-flower Reinorchid,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Piperia yadonii,Morgan & Ackerman,Species,162878,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Pityphyllum amesianum,Schltr.,Species,44904,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -12571,7 +12575,6 @@ Plant,Poaephyllum parviflorum,(J.J. Smith) Ridley,Species,50768,,II,23/06/2010,C
 Plant,Poaephyllum pauciflorum,(Hook.f.) Ridley,Species,41136,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Poaephyllum trilobum,J.J. Smith,Species,52012,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Podangis dactyloceras,,Species,185161,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Podocarpus neriifolius,D.Don in Lambert,SPECIES,6212,Black Pine,III,23/06/2010,Included in Appendix III,NEW,III
 Plant,Podochilus cornutus,(Blume) Sch.,Species,105710,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Podochilus falcatus,Lindley,Species,24278,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Podochilus gracilis,(Blume) Lindley,Species,50769,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -12707,7 +12710,6 @@ Plant,Prosthechea boothiana,(Lindl.) W.E.Higgins,Species,185933,,II,23/06/2010,C
 Plant,Prosthechea cochleata,(L.) W.E.Higgins,Species,185936,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Prosthechea favoris,(Rchb.f.) Salazar & Soto Arenas,Species,185934,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Prosthechea fragans,(Sw.) W.E.Higgins,Species,185938,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Protea odorata,Thunb.,SPECIES,5894,Ground-rose,DELII,23/06/2010,Deleted from Appendix II,DELETION,II
 Plant,Prunus africana,(Hook. f.) Kalkm.,SPECIES,69586,Red Stinkwood,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Pseuderia micronesiaca,Schltr.,Species,44245,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Pseuderia ramosa,L.O. Williams,Species,50577,,II,23/06/2010,Change in Annotation,ANNOTATION,II
@@ -14247,8 +14249,6 @@ Plant,Zootrophion gracilentum,(Reichb.f.) Luer,Species,17838,,II,23/06/2010,Chan
 Plant,Zootrophion hypodiscus,(Reichb.f.) Luer,Species,16735,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Zygopetalum maculatum,,Species,177395,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Zygopetalum marginatum,(Rchb.f.) Rchb.f. 1863,Species,175212,,II,23/06/2010,Change in Annotation,ANNOTATION,II
-Plant,Zygosicyos pubescens,Beentje. 1995,SPECIES,192417,,II,23/06/2010,Included in Appendix II,NEW,II
-Plant,Zygosicyos tripartitus,Humbert 1944,SPECIES,7994,,II,23/06/2010,Included in Appendix II,NEW,II
 Plant,Zygostates aderaldoana,"Toscano, L.P.Felix & Dornelas",Species,192525,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Zygostates alleniana,Kraenzl.,Species,175719,,II,23/06/2010,Change in Annotation,ANNOTATION,II
 Plant,Zygostates apiculata,(Lindl.) Toscano 2001,Species,175721,,II,23/06/2010,Change in Annotation,ANNOTATION,II
