@@ -2,7 +2,7 @@ window.JST ||= {}
 
 window.JST['stats'] = _.template("""
   <div class="col1">
-    <h3>UNEP-WCMC API</h3>
+    <h3>Automatic Update</h3>
 
     <h4>Listing Changes</h4>
     <div class="large-number-grid">
