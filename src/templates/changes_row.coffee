@@ -21,6 +21,17 @@ window.JST['changes_row'] = _.template("""
         <span class="author"><%= speciesAuthor %></span>
       </div>
     </div>
+  <% } else if (change.get('change_type') === 'ANNOTATION') { %>
+  <td>
+    <%= speciesName %>
+    <span class="author"><%= speciesAuthor %></span>
+  </td>
+  <td>
+    <div class="new-annotation <% if (change.get('applied')) { %>done<% } %>">
+      <div>
+        New or updated annotations
+      </div>
+    </div>
   <% } else { %>
   <td>
     <%= speciesName %>
@@ -33,7 +44,13 @@ window.JST['changes_row'] = _.template("""
       <% } else { %>
         <div class="icon <%= speciesListing.toLowerCase() %>"></div>
       <% } %>
-      <div class="icon <%= change.get('species_listing_name')%>"></div>
+      <%
+        var newListing = change.get('species_listing_name');
+        if (change.get('change_type') === 'DELETION') {
+          newListing = "deletion";
+        }
+      %>
+      <div class="icon <%= newListing %>"></div>
     </div>
   <% } %>
     <div class="control">

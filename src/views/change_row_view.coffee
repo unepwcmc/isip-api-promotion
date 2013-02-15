@@ -25,6 +25,7 @@ class Backbone.Views.ChangeRowView extends Backbone.View
     @$el.html(@template(cid: @cid, change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
 
   toggleChange: (e) ->
+    console.log @model.get('change_type')
     @model.toggleChange()
     @render()
 
