@@ -3,13 +3,13 @@ window.Backbone.Views ||= {}
 
 class Backbone.Views.ChangeRowView extends Backbone.View
   tagName: 'tr'
-  template: JST['changes_row']
 
   events:
     "click .btn": "toggleChange"
 
   initialize: (options) ->
     @model = options.model
+    @template = JST["changes_row_#{@model.get('change_type').toLowerCase()}"]
     @render()
 
   render: =>

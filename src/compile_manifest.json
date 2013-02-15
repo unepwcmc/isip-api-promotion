@@ -9,7 +9,10 @@
   "collections/change_collection",
   "templates/changes_index",
   "views/changes_index_view",
-  "templates/changes_row",
+  "templates/changes_row_addition",
+  "templates/changes_row_annotation",
+  "templates/changes_row_deletion",
+  "templates/changes_row_new",
   "views/change_row_view",
   "templates/stats",
   "views/stats_view"
