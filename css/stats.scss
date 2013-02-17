@@ -227,33 +227,6 @@
               height: 26px;
 
               div {
-                &.icon {
-                  height: 26px;
-                  width: 26px;
-                  background-repeat: no-repeat;
-                  background-position: 0px 2px;
-
-                  &.i {
-                    background-image: url(../img/icon-i.png);
-                    @include image-2x("../img/icon-i@2x.png", 26px, 26px);
-                  }
-
-                  &.ii {
-                    background-image: url(../img/icon-ii.png);
-                    @include image-2x("../img/icon-ii@2x.png", 26px, 26px);
-                  }
-
-                  &.iii {
-                    background-image: url(../img/icon-iii.png);
-                    @include image-2x("../img/icon-iii@2x.png", 26px, 26px);
-                  }
-
-                  &.deletion {
-                    background-image: url(../img/icon-del.png);
-                    @include image-2x("../img/icon-del@2x.png", 26px, 26px);
-                  }
-                }
-
                 &:last-child {
                   margin-left: 128px;
                   position: absolute;
@@ -273,6 +246,13 @@
 
               div {
                 padding-top: 0;
+                position: relative;
+
+                .icon {
+                  top: -1px;
+                  height: 28px;
+                  margin-right: 10px;
+                }
               }
             }
 
@@ -373,6 +353,34 @@ h4 {
   font-size: 0.8em;
   margin-bottom: 0;
 }
+
+.icon {
+  height: 26px;
+  width: 26px;
+  background-repeat: no-repeat;
+  background-position: 0px 2px;
+
+  &.i {
+    background-image: url(../img/icon-i.png);
+    @include image-2x("../img/icon-i@2x.png", 26px, 26px);
+  }
+
+  &.ii {
+    background-image: url(../img/icon-ii.png);
+    @include image-2x("../img/icon-ii@2x.png", 26px, 26px);
+  }
+
+  &.iii {
+    background-image: url(../img/icon-iii.png);
+    @include image-2x("../img/icon-iii@2x.png", 26px, 26px);
+  }
+
+  &.deletion {
+    background-image: url(../img/icon-del.png);
+    @include image-2x("../img/icon-del@2x.png", 26px, 26px);
+  }
+}
+
 
 /*
   Stat application animations

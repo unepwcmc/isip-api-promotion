@@ -345,7 +345,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row_new'] = _.template("<% if (change.get('applied')) { %>\n  <td>\n    <div class=\"fade-in\">\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n<% } else { %>\n  <td class=\"empty\">\n    New species to be added\n<% } %>\n  </td>\n<td>\n  <div class=\"new-species <% if (change.get('applied')){ %>move<% } %>\">\n    <div>\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+  window.JST['changes_row_new'] = _.template("<% if (change.get('applied')) { %>\n  <td>\n    <div class=\"fade-in\">\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n<% } else { %>\n  <td class=\"empty\">\n    New species to be added\n<% } %>\n  </td>\n<td>\n  <div class=\"new-species <% if (change.get('applied')){ %>move<% } %>\">\n    <div>\n      <div class=\"icon i\"></div>\n      <%= speciesName %>\n      <span class=\"author\"><%= speciesAuthor %></span>\n    </div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.Backbone || (window.Backbone = {});
 

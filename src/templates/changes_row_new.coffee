@@ -15,6 +15,7 @@ window.JST['changes_row_new'] = _.template("""
   <td>
     <div class="new-species <% if (change.get('applied')){ %>move<% } %>">
       <div>
+        <div class="icon i"></div>
         <%= speciesName %>
         <span class="author"><%= speciesAuthor %></span>
       </div>
