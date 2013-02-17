@@ -2,8 +2,10 @@ window.JST ||= {}
 
 window.JST['changes_row_deletion'] = _.template("""
   <td>
-    <%= speciesName %>
-    <span class="author"><%= speciesAuthor %></span>
+    <div class="<% if (change.get('applied')) { %> grey-out <% } %>">
+      <%= speciesName %>
+      <span class="author"><%= speciesAuthor %></span>
+    </div>
   </td>
   <td>
     <div class="appendix-change <% if (change.get('applied')){ %>move<% } %>">

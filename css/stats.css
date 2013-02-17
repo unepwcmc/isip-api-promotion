@@ -192,7 +192,8 @@
         font-size: 0.9em; }
         .row.changes .changes-table table tr td:first-child {
           width: 255px;
-          border-right: 1px solid #e5e5e5; }
+          border-right: 1px solid #e5e5e5;
+          font-style: italic; }
         .row.changes .changes-table table tr td div:first-child {
           float: left;
           padding-top: 1em; }
@@ -298,7 +299,8 @@
         .row.changes .changes-table table tr td.empty,
         .row.changes .changes-table table tr td span.author {
           color: #cfcfcf;
-          font-weight: normal; }
+          font-weight: normal;
+          font-style: normal; }
         .row.changes .changes-table table tr td span.author {
           font-size: 0.7em;
           display: block; }
@@ -485,34 +487,6 @@ h4 {
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */ }
 
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
-
-@-moz-keyframes fadeOut {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
-
-@-o-keyframes fadeOut {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
-
-@keyframes fadeOut {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
@@ -540,3 +514,105 @@ h4 {
 
   to {
     opacity: 1; } }
+
+.grey-out {
+  opacity: 1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: greyOut;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: greyOut;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-name: greyOut;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: greyOut;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes greyOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0.5; } }
+
+@-moz-keyframes greyOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0.5; } }
+
+@-o-keyframes greyOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0.5; } }
+
+@keyframes greyOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0.5; } }
+
+.fade-out {
+  opacity: 1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: fadeOut;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-name: fadeOut;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }

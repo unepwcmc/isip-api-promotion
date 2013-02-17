@@ -341,7 +341,7 @@
 
   window.JST || (window.JST = {});
 
-  window.JST['changes_row_deletion'] = _.template("<td>\n  <%= speciesName %>\n  <span class=\"author\"><%= speciesAuthor %></span>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <div class=\"icon deletion\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
+  window.JST['changes_row_deletion'] = _.template("<td>\n  <div class=\"<% if (change.get('applied')) { %> grey-out <% } %>\">\n    <%= speciesName %>\n    <span class=\"author\"><%= speciesAuthor %></span>\n  </div>\n</td>\n<td>\n  <div class=\"appendix-change <% if (change.get('applied')){ %>move<% } %>\">\n    <% if (change.get('previousListing') != undefined) { %>\n      <div class=\"icon <%= change.get('previousListing').toLowerCase() %>\"></div>\n    <% } else { %>\n      <div class=\"icon <%= speciesListing.toLowerCase() %>\"></div>\n    <% } %>\n    <div class=\"icon deletion\"></div>\n  </div>\n  <div class=\"control\">\n    <% if (!change.get('applied')) { %>\n      <a class=\"btn\">Apply</a>\n    <% } else { %>\n      <a class=\"btn activated\">Undo</a>\n    <% } %>\n  </div>\n</td>");
 
   window.JST || (window.JST = {});
 

@@ -205,6 +205,7 @@
             &:first-child {
               width: 255px;
               border-right: 1px solid #e5e5e5;
+              font-style: italic;
             }
 
             div:first-child {
@@ -306,6 +307,7 @@
             span.author {
               color: #cfcfcf;
               font-weight: normal;
+              font-style: normal;
             }
 
             span.author {
@@ -402,12 +404,27 @@ h4 {
   @include animation(0s, 1s, fadeIn);
 }
 
-@include keyframe(fadeOut) {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
 @include keyframe(fadeIn) {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+.grey-out {
+  opacity: 1;
+  @include animation(0s, 1s, greyOut);
+}
+
+@include keyframe(greyOut) {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+.fade-out {
+  opacity: 1;
+  @include animation(0s, 1s, fadeOut);
+}
+
+@include keyframe(fadeOut) {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
