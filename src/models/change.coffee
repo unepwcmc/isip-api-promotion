@@ -14,7 +14,9 @@ class window.Backbone.Models.Change extends Backbone.Model
   applyChange: ->
     @set(applied: true)
 
-    @set(previousListing: @getSpecies().get('current_listing'))
+    unless (@get('previousListing')?)
+      @set(previousListing: @getSpecies().get('current_listing'))
+
     @getSpecies().set(current_listing: @get('species_listing_name'))
 
   undoChange: ->
@@ -26,7 +28,9 @@ class window.Backbone.Models.Change extends Backbone.Model
     @set(applied: !@get('applied'))
 
     if @get('applied')
-      @set(previousListing: @getSpecies().get('current_listing'))
+      unless (@get('previousListing')?)
+        @set(previousListing: @getSpecies().get('current_listing'))
+
       @getSpecies().set(current_listing: @get('species_listing_name'))
     else
       @getSpecies().set(current_listing: @get('previousListing'))

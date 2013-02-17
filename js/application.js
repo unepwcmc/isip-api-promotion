@@ -170,9 +170,11 @@
       this.set({
         applied: true
       });
-      this.set({
-        previousListing: this.getSpecies().get('current_listing')
-      });
+      if (!(this.get('previousListing') != null)) {
+        this.set({
+          previousListing: this.getSpecies().get('current_listing')
+        });
+      }
       return this.getSpecies().set({
         current_listing: this.get('species_listing_name')
       });
@@ -192,9 +194,11 @@
         applied: !this.get('applied')
       });
       if (this.get('applied')) {
-        this.set({
-          previousListing: this.getSpecies().get('current_listing')
-        });
+        if (!(this.get('previousListing') != null)) {
+          this.set({
+            previousListing: this.getSpecies().get('current_listing')
+          });
+        }
         return this.getSpecies().set({
           current_listing: this.get('species_listing_name')
         });
