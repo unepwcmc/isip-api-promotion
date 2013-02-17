@@ -153,6 +153,10 @@
 
       h2 {
         display: inline;
+
+        span {
+          text-transform: lowercase;
+        }
       }
 
       .btn {

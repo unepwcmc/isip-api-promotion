@@ -158,6 +158,8 @@
   position: relative; }
   .row.changes-header .right h2 {
     display: inline; }
+    .row.changes-header .right h2 span {
+      text-transform: lowercase; }
   .row.changes-header .right .btn {
     position: absolute;
     right: 67px;
