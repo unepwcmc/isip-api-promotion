@@ -6,7 +6,7 @@ window.JST['changes_index'] = _.template("""
       <h2>Species</h2>
     </div>
     <div class="right">
-      <h2>CoP 15 Changes</h2>
+      <h2>CoP15 Changes</h2>
       <% if (changeList.outstandingChanges().length > 0) { %>
         <a id="apply-all" class="btn">Apply All</a>
       <% } else { %>
@@ -36,7 +36,7 @@ window.JST['changes_index'] = _.template("""
         <span class="pull-right"><%= speciesCount %></span>
       </div>
       <div class="right">
-        Total changes
+        Total Number of Listing Changes
         <span class="pull-right"><%= changeModels.length %></span>
       </div>
     </div>

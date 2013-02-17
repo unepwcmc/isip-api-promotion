@@ -2,9 +2,9 @@ window.JST ||= {}
 
 window.JST['stats'] = _.template("""
   <div class="col1">
-    <h3>UNEP-WCMC API</h3>
+    <h3>Automatic Update</h3>
 
-    <h4>Changes to apply</h4>
+    <h4>Listing Changes</h4>
     <div class="large-number-grid">
       <%= changesLeftToApply %>
       <span>Out Of <%= totalChanges %></span>
@@ -21,7 +21,7 @@ window.JST['stats'] = _.template("""
   <div class="col2">
     <h3>Manual Update</h3>
 
-    <h4>Changes to apply</h4>
+    <h4>Listing Changes</h4>
     <div class="large-number-grid">
       <%= manualOutstandingChanges %>
       <span>Out Of <%= totalChanges %></span>
@@ -36,7 +36,7 @@ window.JST['stats'] = _.template("""
   </div>
 
   <div class="col3">
-    <h3>You Saved</h3>
+    <h3>Time Saved</h3>
     <div class="time-grid time-saved">
       <div><%= timeSaved.days %></div>
       <span class="hours"><%= timeSaved.hours %></span>
