@@ -157,7 +157,8 @@ footer {
       footer .footer-inner img:first-child {
         padding-right: 10px; }
   footer .powered-by {
-    font-size: 0.5em; }
+    font-size: 0.5em;
+    color: #b2b2b2; }
     footer .powered-by img {
       display: block;
       margin: 0;
