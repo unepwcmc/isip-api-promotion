@@ -201,6 +201,8 @@
           width: 255px;
           border-right: 1px solid #e5e5e5;
           font-style: italic; }
+          .row.changes .changes-table table tr td:first-child.new-species .icon {
+            margin-right: 10px; }
         .row.changes .changes-table table tr td div:first-child {
           float: left;
           padding-top: 1em; }
@@ -236,7 +238,9 @@
               background-size: 26px 26px; } }
           .row.changes .changes-table table tr td .new-species div {
             padding-top: 0;
-            position: relative; }
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden; }
             .row.changes .changes-table table tr td .new-species div .icon {
               top: -1px;
               height: 28px;

@@ -2,22 +2,23 @@ window.JST ||= {}
 
 window.JST['changes_row_new'] = _.template("""
   <% if (change.get('applied')) { %>
-    <td>
+    <td class="new-species" title="<%= speciesName.long %>">
       <div class="fade-in">
-        <%= speciesName %>
-        <span class="author"><%= speciesAuthor %></span>
+        <div class="icon <%= change.get('species_listing_name') %>"></div>
+        <%= speciesName.short %>
+        <span class="author" title="<%= speciesAuthor.long %>"><%= speciesAuthor.short %></span>
       </div>
   <% } else { %>
     <td class="empty">
       New species to be added
   <% } %>
     </td>
-  <td>
+  <td title="<%= speciesName.long %>">
     <div class="new-species <% if (change.get('applied')){ %>move<% } %>">
       <div>
-        <div class="icon i"></div>
-        <%= speciesName %>
-        <span class="author"><%= speciesAuthor %></span>
+        <div class="icon <%= change.get('species_listing_name') %>"></div>
+        <%= speciesName.short %>
+        <span class="author" title="<%= speciesAuthor.long %>"><%= speciesAuthor.short %></span>
       </div>
     </div>
     <div class="control">

@@ -1,9 +1,9 @@
 window.JST ||= {}
 
 window.JST['changes_row_annotation'] = _.template("""
-  <td>
-    <%= speciesName %>
-    <span class="author"><%= speciesAuthor %></span>
+  <td title="<%= speciesName.long %>">
+    <%= speciesName.short %>
+    <span class="author" title="<%= speciesAuthor.long %>"><%= speciesAuthor.short %></span>
   </td>
   <td>
     <div class="new-annotation <% if (change.get('applied')) { %>done<% } %>">

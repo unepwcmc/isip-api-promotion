@@ -1,10 +1,10 @@
 window.JST ||= {}
 
 window.JST['changes_row_deletion'] = _.template("""
-  <td>
+  <td title="<%= speciesName.long %>">
     <div class="<% if (change.get('applied')) { %> grey-out <% } %>">
-      <%= speciesName %>
-      <span class="author"><%= speciesAuthor %></span>
+      <%= speciesName.short %>
+      <span class="author" title="<%= speciesAuthor.long %>"><%= speciesAuthor.short %></span>
     </div>
   </td>
   <td>

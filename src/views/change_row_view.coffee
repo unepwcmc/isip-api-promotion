@@ -15,14 +15,31 @@ class Backbone.Views.ChangeRowView extends Backbone.View
   render: =>
     if @model.get('applied') then @$el.addClass('applied') else @$el.removeClass('applied') 
     if @model.getSpecies() 
-      speciesName = @model.getSpecies().get('full_name')
+      speciesName = speciesNameShort = @model.getSpecies().get('full_name')
       speciesListing = @model.getSpecies().get('current_listing')
-      speciesAuthor = @model.getSpecies().get('author_year')
+      speciesAuthor = speciesAuthorShort = @model.getSpecies().get('author_year')
+
+      if speciesName.length > 20
+        speciesNameShort = speciesNameShort.slice(0, 17) + "..."
+
+      if speciesAuthor? && speciesAuthor.length > 25
+        speciesAuthorShort = speciesAuthorShort.slice(0, 22) + "..."
     else
       speciesName = 'Unknown species'
       speciesListing = 'Unlisted'
       speciesAuthor = ""
-    @$el.html(@template(cid: @cid, change: @model, speciesName: speciesName, speciesListing: speciesListing, speciesAuthor: speciesAuthor))
+
+    @$el.html(@template(
+      cid: @cid
+      change: @model
+      speciesName:
+        long: speciesName
+        short: speciesNameShort
+      speciesListing: speciesListing
+      speciesAuthor:
+        long: speciesAuthor
+        short: speciesAuthorShort
+    ))
 
   toggleChange: (e) ->
     console.log @model.get('change_type')

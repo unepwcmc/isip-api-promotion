@@ -215,6 +215,12 @@
               width: 255px;
               border-right: 1px solid #e5e5e5;
               font-style: italic;
+
+              &.new-species {
+                .icon {
+                  margin-right: 10px;
+                }
+              }
             }
 
             div:first-child {
@@ -252,7 +258,8 @@
               div {
                 padding-top: 0;
                 position: relative;
-
+                white-space: nowrap;
+                overflow: hidden;
                 .icon {
                   top: -1px;
                   height: 28px;
